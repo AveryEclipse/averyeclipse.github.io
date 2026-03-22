@@ -1,5 +1,5 @@
 <div align="center">
-<img src="public/img/wordmark.svg" width="50%">
+<img src="public/img/wordmark.svg" width="30%">
 <h1>AveryWebsite</h1>
 </div>
 <div align="center">
