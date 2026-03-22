@@ -1,11 +1,12 @@
 html {
-     color: white;
-    }
+    color: white;
+}
 body {
-     background: url(../img/rf/bg.gif) repeat;
+    background: url(../img/rf/bg.gif) repeat;
 }
 pre, code {
     font-family: monospace;
+    font-size: 15.5px;
 }
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
@@ -16,10 +17,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .rf--hidden {
     display: none;
-}
-.footer {
-    text-align: center;
-    padding: 16px;
 }
 a {
     color: white;
@@ -63,35 +60,60 @@ a {
     height: auto;
     margin: 16px auto;
 }
+.blogpost p,
+.blogpost li {
+    line-height: 1.4;
+}
 .head,
 .section {
-     padding-top: 16px;
-     padding-bottom: 16px;
-     flex-grow: 1;
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
 }
 .head.blog, .section {
-     display: block;
+    display: block;
 }
 .head.blog #title {
     padding: 0;
 }
-.section.nopadding {
-    padding: 0;
+.button {
+    display: inline;
 }
-#eighteightthreeone {
+.button8831 img {
     image-rendering: pixelated;
     padding-left: 2px;
     padding-right: 2px;
     transition: 0.2s;
 }
+.device #device-img {
+    width: 0;
+}
+.device {
+    display: block;
+}
+.footer {
+    text-align: center;
+    padding: 16px;
+}
 #nocss {
     display: none;
 }
-@media (min-width: 1024px) {
-   html {
-    font-size: 20px;
-  }
+@media (max-width: 768px) {
+    .content {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+    .gif {
+      margin-top: 20px;
+    }
+}
+@media (min-width: 768px) {
+    html {
+        font-size: 20px;
+    }
+    pre, code {
+        font-size: 17.5px;
+    }
+    .gif {
+      float: right;
+    }
 }

@@ -19,7 +19,7 @@ So with that all over the way, plus the fact that:
 
 I have rebuilt this website from scratch.
 
-## What's new?
+# What's new?
 This time I chose Astro as my site framework and Tailwind CSS as the CSS framework.
 
 Astro from the beginning seemed pretty interesting to look at (and I'm still interested in looking into it more and take advantage of every feature)

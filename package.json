@@ -1,7 +1,7 @@
 {
-  "name": "kaywebsite",
+  "name": "averywebsite",
   "type": "module",
-  "version": "26.0",
+  "version": "dev",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.11",
-    "astro": "^5.1.7",
+    "astro": "^5.0.0",
     "markdown-it": "^14.1.0",
     "remark-breaks": "^4.0.0",
     "sanitize-html": "^2.14.0"

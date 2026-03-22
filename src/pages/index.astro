@@ -1,41 +1,41 @@
 ---
 import { d } from "../config";
 import Layout from '../layouts/Site.astro';
-import Box from '../components/Box.astro';
+import Box from '../components/CollapsibleBox.astro';
 ---
 
-<Layout title="Home" head="👋 Hi there!~" desc=`You landed on ${d.name}'s personal website! ^w^`>
+<Layout title="Home" head="👋 Hi there~!" desc=`You landed on ${d.shortname}'s personal website! ^w^` rfgif="../../img/rf/welcome.gif" rfwarning={true}>
       <div>Who I am:
         <ul class="list nobullet">
-        <li>💻 <b>I am a tech (mainly software) nerd</b> who happens to know a thing or two about coding <i><small>(<a href="/devices">list of devices</a>)</small></i></li>
-        <li>📹 <b>I occasionally make videos</b> on YouTube about things I enjoy~</li>
-        <li>💖 <b>Additionally into</b> exploring the outdoors <i><small>(touching grass™)</small></i>, media perservation, gaming etc.</li>
+        <li>💻 <b>I am a tech nerd</b> who happens to know a thing or two about coding.</li>
+        <li>📹 <b>I make videos</b> on YouTube about things I like and enjoy.</li>
+        <li>💖 <b>Part-time</b> gamer, graphic designer and artist.</li>
         </ul>
         <br>
-        <div><b>Pronouns:</b> {d.pronouns} <small><i>(I don't care :p)</i></small></div>
-        <div><b>Timezone:</b> UTC{d.tz}</div>
+        <div><b>Pronouns:</b> {d.pronouns}</div>
+        <div><b>Timezone:</b> UTC{d.timezone}</div>
       </div>
-   </div>
     <div class="grid">
     <Box title="⭐ Buttons!">
-      <div>
-      <a href="https://axeon-network.github.io"><img src="/img/8831/axeon2.png" title="Axeon Network" id="eighteightthreeone"></a>
-      <a href="https://wetdry.world/@clyron"><img src="/img/8831/wetdryworld.png" title="Wet-Dry World" id="eighteightthreeone"></a>
-      <a href="http://bsky.app/profile/did:plc:fqvzbqsjzjkl4o66rfp6cgk3"><img src="/img/8831/bluesky.gif" title="Bluesky" id="eighteightthreeone"></a>
-      <img src="/img/8831/gnu-linux.gif" title="Made on GNU/Linux" id="eighteightthreeone">
-      <a href="https://archlinux.org"><img src="/img/8831/archlinux.gif" title="Arch Linux" id="eighteightthreeone"></a>
-      <a href="https://code.visualstudio.com/"><img src="/img/8831/vscode.gif" title="Visual Studio Code" id="eighteightthreeone"></a>
-      <img src="/img/8831/ublockoriginnow.png" title="uBlock Origin Now" id="eighteightthreeone">
-      <img src="/img/8831/ieexplode.gif" title="Internet Exploder" id="eighteightthreeone">
-      <img src="/img/8831/saynotoweb3.gif" title="Say no to Web3" id="eighteightthreeone">
-      <img src="/img/8831/eyes.gif" title="Best viewed with EYES" id="eighteightthreeone">
-      <img src="/img/8831/valid-any.gif" title="Any Browser!" id="eighteightthreeone">
-      <a href="https://googleballs.com"><img src="/img/8831/googleballs.png" title="Google Balls!!" id="eighteightthreeone"></a>
+      <div class="button8831">
+      <a href="https://axeon-network.github.io"><img src="/img/8831/axeon2.png" title="Axeon Network"></a>
+      <a href="https://wetdry.world/@clyron"><img src="/img/8831/wetdryworld.png" title="Wet-Dry World"></a>
+      <a href="http://bsky.app/profile/did:plc:fqvzbqsjzjkl4o66rfp6cgk3"><img src="/img/8831/bluesky.gif" title="Bluesky"></a>
+      <img src="/img/8831/gnu-linux.gif" title="Made on GNU/Linux">
+      <a href="https://archlinux.org"><img src="/img/8831/archlinux.gif" title="Arch Linux"></a>
+      <a href="https://code.visualstudio.com/"><img src="/img/8831/vscode.gif" title="Visual Studio Code"></a>
+      <img src="/img/8831/ublockoriginnow.png" title="uBlock Origin Now">
+      <img src="/img/8831/ieexplode.gif" title="Internet Exploder">
+      <img src="/img/8831/saynotoweb3.gif" title="Say no to Web3">
+      <img src="/img/8831/eyes.gif" title="Best viewed with EYES">
+      <img src="/img/8831/valid-any.gif" title="Any Browser!">
+      <a href="https://googleballs.com"><img src="/img/8831/googleballs.png" title="Google Balls!!"></a>
+      <a href="https://nixie.starlightnet.work"><img src="https://nixie.starlightnet.work/?fg=eeeeee&bg=111111&pixel=1" alt="view counter"></a>
       </div>
       <div>
          <div style="padding-top:10px; padding-bottom:10px;"><b>My buttons!</b></div>
-         <img src="/img/8831/kay.png" id="eighteightthreeone" class="mybutton" data-copy='&lt;a href="http://kay.is-a.dev"&gt;&lt;img src="http://kay.is-a.dev/img/8831/kay.png"&gt;' style="cursor:pointer;">
-         <img src="/img/8831/kaynight.png" id="eighteightthreeone" class="mybutton" data-copy='&lt;a href="http://kay.is-a.dev"&gt;&lt;img src="http://kay.is-a.dev/img/8831/kaynight.png"&gt;' style="cursor:pointer;">
+         <img src="/img/8831/avery1.png" class="mybutton" data-copy=`&lt;a href="http://${d.domain}"&gt;&lt;img src="http://${d.domain}/img/8831/avery1.png"&gt;` style="cursor:pointer;">
+         <img src="/img/8831/avery2.png" class="mybutton" data-copy=`&lt;a href="http://${d.domain}"&gt;&lt;img src="http://${d.domain}/img/8831/avery2.png"&gt;` style="cursor:pointer;">
          <div id="clicktocopy" class="rf--hidden"></div>
          </div>
          <script>
@@ -51,7 +51,7 @@ import Box from '../components/Box.astro';
 
             navigator.clipboard.writeText(text)
               .then(() => {
-                status.innerHTML = '<b>✅ Copied!</b>';
+                status.innerHTML = '<b>Copied!</b>';
               setTimeout(() => {
                status.innerHTML = copyInstructions;
                }, 1000);
@@ -61,10 +61,18 @@ import Box from '../components/Box.astro';
      </script>
     </Box>
     <Box title="🪐 Webrings!">
-       <div><b><a href="https://fediring.net/">Fediring</a>:</b> <a href="https://fediring.net/previous?host=kay.is-a.dev">&lt;&#45;&#45;</a> <a href="https://fediring.net/random">Random</a> <a href="https://fediring.net/next?host=kay.is-a.dev">&#45;&#45;&gt;</a></div>
+      <div id="webring">
+        <b><a href="https://fediring.net/">Fediring</a></b>
+        <a class="button" href=`https://fediring.net/previous?host=${d.domain}` title="Previous Site">
+          <span class="mof--hidden">&lt;&#45;&#45;</span>
+          <i class="fas fa-arrow-left"></i></a>
+        <a class="button" href="https://fediring.net/random" title="Random Site">
+          <span class="mof--hidden">Random</span>
+          <i class="fas fa-shuffle"></i></a>
+        <a class="button" href=`https://fediring.net/next?host=${d.domain}` title="Next Site">
+          <span class="mof--hidden">&#45;&#45;&gt;</span>
+          <i class="fas fa-arrow-right"></i></a>
+      </div>
     </Box>
-       <div class="mof--hidden" style="margin-top: 20px;">
-          <b>Warning!</b> Not all of the button or webring links may work on ancient browsers.
-        </div>
     </div>
 </Layout>

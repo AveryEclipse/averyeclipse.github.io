@@ -20,7 +20,7 @@ However at the end of the day I just ended up getting a different phone: the **G
 ![i use android btw](/img/blog/41.png)
 *i use android btw*
 
-## Basic specifications
+# Basic specifications
 The **Galaxy A26 5G** is a rather recently-released Galaxy phone. It was announced on [2 March 2025](https://en.wikipedia.org/wiki/Samsung_Galaxy_A26_5G), with availability by region by 19 March 2025. Frankly not too long ago!
 
 Out-of-the-box it comes with **Android 16 (One UI 7)**, not supported on the Galaxy A23 5G! Aaand oh boy, things are quite interesting in One UI 7, I'll get to it later
@@ -46,7 +46,7 @@ Not-so upgrades compared to the A23 5G:
 
 Other than that, nothing much really significant about the A26 versus A23.
 
-## The software
+# The software
 As previously said above, the Galaxy A26 5G comes with Android 15 (One UI 7). Unlike the A23 5G, the A26 5G is entitled for **6 major Android version upgrades**, which is a huge step-up meaning I won't have to worry about missing any new Android version for a while
 
 ![](/img/blog/39.png)
@@ -55,22 +55,22 @@ Now say what you want about it but One UI 7 for me personally *geniunely feels l
 
 Something you'd have to get used to when going from One UI 6 (or anything previous) to 7 is the fact the Notifications panel and the control center are now separate from each other, accessible from two separate parts of the screen from the top.
 
-### Preinstalled apps
+## Preinstalled apps
 No significant differences, they are mostly the same except bearing the new One UI 7 look. The phone continues to come preinstalled with apps like Facebook and Netflix. Both can be uninstalled, but the same cannot be said for the former's accompanying Meta App Installer, Meta App Manager and Meta Services apps, which ***can only be disabled***.
 
 [Just like the A23 5G](https://wetdry.world/@lynxmic/109757111919386114), it still comes with this **Samsung Free** app <small>(which like who even uses it lmao)</small>, however **you can actually uninstall it**. This is as opposed to the A23 5G where you literally cannot even disable it, let alone uninstall it, as if it's """essential""" (no it's not).
 
-### AI stuff
+## AI stuff
 Unlike on the A23 5G which launched at a time when AI wasn't popular <small>(ChatGPT didn't even launch yet!)</small>, the A26 comes with Google's Gemini AI chatbot preinstalled as a system app which can only be disabled. **There are also Galaxy AI features as well**, but they do not really serve a true purpose for me personally at least... maybeee for those who are actually fans of AI, I ain't one of them
 
 They're just there to be there, because they're basically AI and it's a trend for literally every major tech company at this point, but that's a whole different story (let's be honest, AI is overhyped)
 
-### Built-in screen recorder
+## Built-in screen recorder
 There's finally a built-in screen recorder included out-of-the-box, so need for a 3rd-party screen recorder (like AZ Screen Recorder, which is what I've been always using) anymore.
 
 For some reason, just like with case with seamless updates (which I've already talked about above), the built-in screen recorder was not available on all but select Galaxy devices. So the A23 5G didn't come with a built-in recorder, but higher-end phones from the same generation did <small>(unless you count the built-in screen recorder from the Game Booster menu)</small>.
 
-## The camera
+# The camera
 The A26 5G camera has more features than the A23 5G's. We have especially new modes like Hyperlapse, Single Take, Pro Video and Super Slo-Mo.
 
 ![](/img/blog/38.png)

@@ -30,7 +30,7 @@ With my "new" current laptop, I pretty much stopped the practice of closing and 
 
 As of now I no longer own my previous laptop, it's basically an identical body to my current one except less powerful and just broken. The only differences are the color and the Windows key - previous laptop had the Windows 10 logo, current has the Windows 11 logo
 
-## BIOS
+# BIOS
 When first powering on the "new" current laptop, I actually went in the BIOS first... and surprise, surprise, we have a GUI!
 As opposed to the non-GUI "Lenovo Setup Utility" of my previous laptop, you have a cursor that you can use to browse around
 
@@ -46,7 +46,7 @@ It doesn't bother me, but it was just something I felt like pointing out
 
 Additionally (probably thanks to the GUI), literally 2GB of the total of 12GB RAM is allocated for the "hardware" - the same amount my first PC had, a contrast from the 200MB on my previous laptop. Doesn't bother me either, as thankfully I never really run out of the 10GB *usable* RAM, *yet* (shoutout to Windows's page file and Linux's swap file)
 
-## Basic tasks
+# Basic tasks
 Let's start with something basic - daily tasks. Of course if my previous laptop could at least handle "basic tasks" well (as in, for example, just one or two browser tabs plus maybe some music in the background playing through headphones, eventually some """"office"""" stuff), so can my current one
 
 Main difference? The RAM doesn't really instantly go up to >90% usage anymore. Often with my previous laptop the RAM would go that far and programs etc would start freezing
@@ -57,8 +57,8 @@ You will need a swap partition of at least 2GB or higher, alternatively you coul
 
 With everything out of the way, I notice with my current laptop that most of the time I check either Task Manager (on Windows) or the System Monitor (on Linux), the RAM usage is often past 4GB. This really implies how important was to have more RAM
 
-## Heavy tasks
-### Virtual Machines (VMs)
+# Heavy tasks
+## Virtual Machines (VMs)
 Since I can finally say I have a computer with reasonable specs, I can now properly VM any operating system (even the most "resource-hungry" ones like many of the modern-day OSes, like Windows 10/11 etc) without having either my VM or my host slow down, and even during recording (most of the time I use VMs these days is primarily for Lynxmic videos)
 
 I no longer really need to add DWORD keys in setup to bypass Windows 11's (rather arbitrary) system requirements, as I can now actually allocate 64GB storage AND 4GB RAM for my VMs. Secure Boot is easy as 3, 2, 1 to activate, CPU isn't a problem, and TPM is just as easy to activate as well
@@ -69,7 +69,7 @@ I have even ran a macOS Sequoia VM, and sure enough that performed better than e
 
 If I could recall any issue virtualizing, it was "modern-day" OSes running slow after a while on VMware on Linux, but that might be because I didn't give my Linux swap partition enough GB's from what I heard
 
-### Gaming
+## Gaming
 After playing several heavy games or the games I previously played on previous main PCs but with more intensive performance settings, I'm very impressed. At first sight i thought it would still have been at least kinda laggy, but nope!
 
 In the past month I've been playing quite a bit of Minecraft Java on this machine and just cannot not notice the fact it is playable even with more intensive graphics (e.g. Shaders or max Render Distance)
@@ -80,7 +80,7 @@ Of course it shouldn't mean you *should* actually play MC on this PC with shader
 
 Not even I thought this machine would run Minecraft so well so at that point I was confident enough to try even heavier games. So I lately started playing Euro Truck Simulator 2 (or "ETS2" for short), a game I was quite interested in for a (long?) while but which none of my previous PCs could handle. Again, zero lag at all, even with high graphics settings
 
-### Video editing
+## Video editing
 So if it can run heavy games actually well, then video editing should work as well, right? Well, yes
 
 Previously, on my previous PC I used to edit with DaVinci Resolve *15*, an old version of this free editing software from 2019 at this point.
@@ -92,7 +92,7 @@ The time taken to render/export something has substantially decreased compared t
 
 About 4K rendering, I don't actually know, but considering I'm just someone making YouTube videos it's just unnecessary to put even more pressure on the CPU just for a video quality in which only like 3 people even watch YT videos on
 
-## Current Setup
+# Current Setup
 From the very beginning when I got this laptop, it had a Windows-Linux dualboot, just like my previous one. Except this time I finally have more SSD space
 
 My current partition setup consists primarily of:
@@ -104,7 +104,7 @@ My current partition setup consists primarily of:
 What I should note is that when I initially set up this laptop, I initially went with Debian 12 (stable) with KDE 5.27 on the Linux side, same distro from my previous laptop
 However, I recently "distrohopped" (actually almost a month ago)...
 
-### The Arch Linux Experience
+## The Arch Linux Experience
 Soooo yes, now I can say that *i use arch btw*. ln late January, I decided to make the switchover from Debian to Arch Linux. So far it really didn't disappoint me at all, haven't looked back
 (I was initially gonna make a separate blog post about this but ultimately gave up on it, so here's just some quick two-three words to say)
 
@@ -124,7 +124,7 @@ If you want to uninstall Konqueror, you can't. Uninstalling Konqueror on Debian 
 
 Overall with Arch I observe that so far I'm not running out of disk space as quickly, which is a nice "upgrade", considering that (again) my Linux and Windows partitions are only 64GB each
 
-## Closing thoughts
+# Closing thoughts
 Best main PC so far, 100000/10
 
 Of course, if I could I *would* have gotten something with even higher specs. Especially even more RAM and even more SSD space wouldn't hurt, maybe sometime in the future, who knows. For now though hopefully this will last me a few years, ideally more than 3 years (~~if this laptop's hinge won't break within that timeframe like the previous 2 laptops~~)

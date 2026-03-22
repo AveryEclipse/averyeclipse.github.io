@@ -3,10 +3,12 @@ interface Props {
 	title: string;
 	head?: string;
 	desc: string;
+	rfgif?: string;
 	showRssButton?: boolean;
 	hideFooter?: boolean;
+	rfwarning?: boolean;
 }
-const { title, head, desc, showRssButton = false, hideFooter = false } = Astro.props;
+const { title, head, desc, rfgif, showRssButton = false, hideFooter = false, rfwarning = false } = Astro.props;
 const heading = head || title;
 import { d } from "../config.ts";
 import Navbar from '../components/Navbar.astro';
@@ -22,7 +24,7 @@ import Footer from '../components/Footer.astro';
         <meta property="og:image" content=`${Astro.site}${d.favicon}`>
         <meta name="title" content={title} />
 		<meta name="description" content={desc} />
-		<link rel="icon" type="image/svg+xml" href=`https://${d.domain}${d.favicon}` />
+		<link rel="icon" type="image/svg+xml" href=`${d.favicon}` />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="stylesheet" href=`https://use.fontawesome.com/releases/v${d.faver}/css/all.css`>
 		<link rel="stylesheet" href="/css/style.rf.css" type="text/css">
@@ -30,9 +32,9 @@ import Footer from '../components/Footer.astro';
 		<title>{title} ~ {d.name}</title>
 	</head>
 	<body>
-		<div style="margin:8px">
         <Navbar />
          <div class="content">
+              <center><div class="mof--hidden gif"><img src={rfgif}></div></center>
 			<div class="head">
 			   <div>
                <h1 id="title">{heading}</h1>
@@ -45,10 +47,14 @@ import Footer from '../components/Footer.astro';
 			   </div>
             </div>
 		<slot />
+		{ rfwarning && (
+		<div class="mof--hidden" style="margin-top: 20px;">
+          <b>Warning!</b> Not all links to external webpages may work on ancient browsers.
+        </div>
+			)}
 		</div>
 		{ !hideFooter && (
 		<Footer />
 		)}
-		</div>
 	</body>
 </html>

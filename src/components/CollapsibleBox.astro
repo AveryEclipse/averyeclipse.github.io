@@ -6,8 +6,10 @@ const { title } = Astro.props;
 ---
 <div>
   <br class="mof--hidden">
-  <div class="box">
+  <details>
+    <summary>
       <h2 class="section">{title}</h2>
+    </summary> <!-- details and summary tags aren't supported on ancient browsers -->
     <slot />
-   </div>
+  </details>
 </div>
