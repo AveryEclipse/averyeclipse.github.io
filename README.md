@@ -10,3 +10,4 @@ This is the source code for my (AveryEclipse's) personal website located at [ave
 Known as *AveryWebsite*, it also includes a blog and is designed for both modern and retro browsers in mind.
 
 Feel free to open an [issue](https://github.com/AveryEclipse/averyeclipse.github.io/issues) on this repository should you find any bugs, typos or anything else of the sort.
+<!-- -->

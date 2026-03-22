@@ -98,13 +98,12 @@ jobs:
           fi
 
       - name: Tag repo
-        if: ${{ steps.version.outputs.skip_version != 'true' && !contains(github.event.head_commit.message, '[nobump]') }}
+        if: steps.version.outputs.skip_version != 'true'
         run: |
           git tag -f $NEW_TAG
           git push origin $NEW_TAG || git push --tags
 
       - name: Update version in package.json
-        if: ${{ !contains(github.event.head_commit.message, '[nobump]') }}
         run: |
           npm pkg set version=${NEW_TAG#v}
           cat package.json
