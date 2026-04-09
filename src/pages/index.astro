@@ -65,14 +65,11 @@ import Box from '../components/CollapsibleBox.astro';
       <div id="webring">
         <b><a href="https://fediring.net/">Fediring</a></b>
         <a class="button" href=`https://fediring.net/previous?host=${d.domain}` title="Previous Site">
-          <span class="mof--hidden">&lt;&#45;&#45;</span>
-          <Icon name="material-symbols:arrow-back-rounded" /></a>
+          <Icon name="material-symbols:arrow-back-rounded" /><span id="link" class="mof--hidden">&lt;&#45;&#45;</span></a>
         <a class="button" href="https://fediring.net/random" title="Random Site">
-          <span class="mof--hidden">Random</span>
-          <Icon name="material-symbols:shuffle" /></a>
+          <Icon name="material-symbols:shuffle" /><span id="link" class="mof--hidden">Random</span></a>
         <a class="button" href=`https://fediring.net/next?host=${d.domain}` title="Next Site">
-          <span class="mof--hidden">&#45;&#45;&gt;</span>
-          <Icon name="material-symbols:arrow-forward-rounded" /></a>
+          <Icon name="material-symbols:arrow-forward-rounded" /><span id="link" class="mof--hidden">&#45;&#45;&gt;</span></a>
       </div>
     </Box>
     </div>

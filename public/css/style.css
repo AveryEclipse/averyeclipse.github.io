@@ -6,7 +6,7 @@
     font-family: "atkinson";
     src: url("../css/fonts/atkinson.ttf");
 }
-@supports (display: flex) {
+@supports (gap: 30px) {
 html {
     background-color: rgb(50, 43, 65);
     color: rgb(209, 202, 231);
@@ -260,23 +260,6 @@ summary::marker,
        width: 30%;
        height: auto;
     }
-@keyframes slide {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-@keyframes fade {
-    from {top: -25px; opacity: 0;}
-    to {top: 0px; opacity: 1;}
-}
-@keyframes star {
-    0% { transform: translate(0, 0) rotate(0deg); }
-    50% { transform: translate(5px, 3px) rotate(180deg); }
-    100% { transform: translate(0, 0) rotate(360deg); }
-}
-}
-@supports (gap: 0.5em) {
 .tag {
     display: inline-block;
     background-color: rgb(72, 70, 95);
@@ -310,10 +293,24 @@ summary::marker,
 .star1 { width: 30px; height: 30px; top: 5vh; left: 10vw; }
 .star3 { width: 35px; height: 35px; top: 10vh; left: 50vw; }
 .star5 { width: 32px; height: 32px; top: 12vh; left: 85vw; }
-
 @media (min-width: 768px) {
 .star2 { width: 25px; height: 25px; top: 8vh; left: 30vw; }
 .star4 { width: 28px; height: 28px; top: 6vh; left: 70vw; }
+}
+@keyframes slide {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fade {
+    from {top: -25px; opacity: 0;}
+    to {top: 0px; opacity: 1;}
+}
+@keyframes star {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(5px, 3px) rotate(180deg); }
+    100% { transform: translate(0, 0) rotate(360deg); }
 }
 }
 }
