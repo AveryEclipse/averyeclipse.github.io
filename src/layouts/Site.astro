@@ -11,6 +11,7 @@ interface Props {
 const { title, head, desc, rfgif, showRssButton = false, hideFooter = false, rfwarning = false } = Astro.props;
 const heading = head || title;
 import { d } from "../config.ts";
+import { Icon } from 'astro-icon/components';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 ---
@@ -20,13 +21,12 @@ import Footer from '../components/Footer.astro';
 	<head>
 		<meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
-        <meta property="og:site_name" content=`${d.shortname}'s website!` />
+        <meta property="og:site_name" content=`${d.shortname}'s Website!` />
         <meta property="og:image" content=`${Astro.site}${d.favicon}`>
         <meta name="title" content={title} />
 		<meta name="description" content={desc} />
 		<link rel="icon" type="image/svg+xml" href=`${d.favicon}` />
 		<meta name="generator" content={Astro.generator} />
-		<link rel="stylesheet" href=`https://use.fontawesome.com/releases/v${d.faver}/css/all.css`>
 		<link rel="stylesheet" href="/css/style.rf.css" type="text/css">
         <link rel="stylesheet" href="/css/style.css" type="text/css">
 		<title>{title} ~ {d.name}</title>
@@ -42,14 +42,14 @@ import Footer from '../components/Footer.astro';
 			   </div>
 			   <div>
 				{ showRssButton && (
-				<a class="button rf--hidden" href="../feed.xml" title="RSS Feed"><i class="fas fa-rss fa-xl"></i></a> 
+				<a class="button rf--hidden" href="../feed.xml" title="RSS Feed"><Icon name="material-symbols:rss-feed" /></a> 
 				)}
 			   </div>
             </div>
 		<slot />
 		{ rfwarning && (
 		<div class="mof--hidden" style="margin-top: 20px;">
-          <b>Warning!</b> Not all links to external webpages may work on ancient browsers.
+          <b>Warning!</b>&nbsp;Not all links to external webpages may work on ancient browsers.
         </div>
 			)}
 		</div>

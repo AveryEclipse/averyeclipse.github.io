@@ -1,5 +1,6 @@
 ---
 import { d } from "../config";
+import { Icon } from 'astro-icon/components';
 import Layout from '../layouts/Site.astro';
 import Box from '../components/CollapsibleBox.astro';
 ---
@@ -9,7 +10,7 @@ import Box from '../components/CollapsibleBox.astro';
         <ul class="list nobullet">
         <li>💻 <b>I am a tech nerd</b> who happens to know a thing or two about coding.</li>
         <li>📹 <b>I make videos</b> on YouTube about things I like and enjoy.</li>
-        <li>💖 <b>Part-time</b> gamer, graphic designer and artist.</li>
+        <li>💖 <b>Part-time</b> gamer and visual artist.</li>
         </ul>
         <br>
         <div><b>Pronouns:</b> {d.pronouns}</div>
@@ -30,7 +31,7 @@ import Box from '../components/CollapsibleBox.astro';
       <img src="/img/8831/eyes.gif" title="Best viewed with EYES">
       <img src="/img/8831/valid-any.gif" title="Any Browser!">
       <a href="https://googleballs.com"><img src="/img/8831/googleballs.png" title="Google Balls!!"></a>
-      <a href="https://nixie.starlightnet.work"><img src="https://nixie.starlightnet.work/?fg=eeeeee&bg=111111&pixel=1" alt="view counter"></a>
+      <a href="https://nixie.starlightnet.work" class="rf--hidden"><img src="https://nixie.starlightnet.work/?fg=eeeeee&bg=111111&pixel=1" alt="view counter"></a>
       </div>
       <div>
          <div style="padding-top:10px; padding-bottom:10px;"><b>My buttons!</b></div>
@@ -65,13 +66,13 @@ import Box from '../components/CollapsibleBox.astro';
         <b><a href="https://fediring.net/">Fediring</a></b>
         <a class="button" href=`https://fediring.net/previous?host=${d.domain}` title="Previous Site">
           <span class="mof--hidden">&lt;&#45;&#45;</span>
-          <i class="fas fa-arrow-left"></i></a>
+          <Icon name="material-symbols:arrow-back-rounded" /></a>
         <a class="button" href="https://fediring.net/random" title="Random Site">
           <span class="mof--hidden">Random</span>
-          <i class="fas fa-shuffle"></i></a>
+          <Icon name="material-symbols:shuffle" /></a>
         <a class="button" href=`https://fediring.net/next?host=${d.domain}` title="Next Site">
           <span class="mof--hidden">&#45;&#45;&gt;</span>
-          <i class="fas fa-arrow-right"></i></a>
+          <Icon name="material-symbols:arrow-forward-rounded" /></a>
       </div>
     </Box>
     </div>

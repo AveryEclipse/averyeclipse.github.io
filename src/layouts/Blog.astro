@@ -25,13 +25,12 @@ for (const h of headings) {
 	<head>
 		<meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta property="og:site_name" content=`${d.shortname}'s blog!` />
+    <meta property="og:site_name" content=`${d.shortname}'s Blog!` />
     <meta property="og:image" content=`${Astro.site}${d.favicon}`>
     <meta name="title" content={frontmatter.title} />
     <meta name="description" content={frontmatter.desc} />
 		<link rel="icon" type="image/svg+xml" href=`${d.favicon}` />
     <meta name="generator" content={Astro.generator} />
-    <link rel="stylesheet" href=`https://use.fontawesome.com/releases/v${d.faver}/css/all.css`>
 		<link rel="stylesheet" href="/css/style.rf.css" type="text/css">
     <link rel="stylesheet" href="/css/style.css" type="text/css">
 		<title>{frontmatter.title} ~ {d.name}</title>

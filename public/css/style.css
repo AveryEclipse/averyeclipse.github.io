@@ -63,10 +63,6 @@ body::after {
 .device .section {
     display: block;
 }
-.head .button {
-    padding-top: 16px;
-    padding-bottom: 16px;
-}
 .content {
     animation: fade 0.3s ease-in-out;
     animation-delay: 0.3s;
@@ -143,8 +139,8 @@ a,
 a.button, button.button {
     background-color: rgb(72, 70, 95);
     color: rgb(209, 202, 231);
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     padding-left: 10px;
     padding-right: 10px;
     margin-inline: 2px;
@@ -196,6 +192,21 @@ summary::marker,
 }
 .rf--hidden {
     display: block;
+}
+[data-icon] {
+    display: inline-block;
+    vertical-align: -2.5px;
+}
+[data-icon="material-symbols:rss-feed"] {
+    width: 35px;
+    height: 35px;
+}
+[data-icon="material-symbols:arrow-back-rounded"],
+[data-icon="material-symbols:shuffle"],
+[data-icon="material-symbols:arrow-forward-rounded"] {
+    width: 25px;
+    height: 25px;
+    vertical-align: -5.5px;
 }
 #webring {
     margin-block: 5px;

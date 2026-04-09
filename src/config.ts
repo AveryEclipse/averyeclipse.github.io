@@ -12,6 +12,4 @@ export const d = {
 
   copyrightyear: "2026", // Copyright year. Change at first site update of the year
   sourcecode: "AveryEclipse/averyeclipse.github.io", // Location of the published source code, in format "username/repo". It has to be GitHub.
-
-  faver: "7.1.0", // The version of FontAwesome to use, for some of the icons
 };

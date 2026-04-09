@@ -64,7 +64,7 @@ export async function GET() {
   }).filter(Boolean);
 
   return rss({
-    title: `${d.shortname}'s Blog`,
+    title: `${d.shortname}'s Blog!`,
     description: `${d.shortname}'s space to ramble about various things`,
     site,
     items,
