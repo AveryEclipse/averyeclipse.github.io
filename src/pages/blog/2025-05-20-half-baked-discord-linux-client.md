@@ -3,7 +3,7 @@ layout: "../../layouts/Blog.astro"
 title: "The half-baked Discord Linux client"
 desc: "Discord doesn't really care that much"
 date: 20 May 2025
-tags: ["discord", "linux"]
+tags: ["software", "discord", "linux"]
 ---
 It's no secret that the official Discord client for Linux is half-baked compared to its Windows and macOS counterparts. For a long time there already has been (and probably the most famous of all) Discord's updating system which always sucked on Linux and still does, but lately things only have been becoming more obvious with the client in general.
 

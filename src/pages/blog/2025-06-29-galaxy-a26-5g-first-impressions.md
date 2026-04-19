@@ -3,7 +3,7 @@ layout: "../../layouts/Blog.astro"
 title: "Galaxy A26 5G first impressions"
 desc: "First phone upgrade in over 2 years"
 date: 29 June 2025
-tags: ["review", "phone", "samsung"]
+tags: ["tech", "review", "phone"]
 ---
 [Last time](/lynxblog/2023/03/05/galaxy-a23-5g-one-month-review-why-switched.html), I said I will keep my previous phone (my then-new Galaxy A23 5G) as my main for at least 1-2 years. I initially got it in late January 2023, and it's been frankly almost 2 years and 6 months since then!
 
