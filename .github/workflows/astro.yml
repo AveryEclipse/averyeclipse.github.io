@@ -60,7 +60,7 @@ jobs:
       - name: Determine version
         id: version
         run: |
-          CHANGED=$(git diff --name-only HEAD~1 HEAD | grep -vE '^(./github/|src/pages/blog/|public/img/blog/|\.gitignore|LICENSE|README\.md|astro\.config\.mjs|src/config\.ts)' || true)
+          CHANGED=$(git diff --name-only HEAD~1 HEAD | grep -vE '^(\.github/|src/pages/blog/|public/img/blog/|\.gitignore|LICENSE|README\.md|astro\.config\.mjs|src/config\.ts)' || true)
 
           LAST_KNOWN_TAG=$(git tag --sort=-v:refname | head -n 1)
 
