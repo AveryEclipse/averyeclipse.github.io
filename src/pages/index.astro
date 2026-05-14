@@ -5,7 +5,7 @@ import Layout from '../layouts/Site.astro';
 import Box from '../components/CollapsibleBox.astro';
 ---
 
-<Layout title="Home" head="👋 Hi there~!" desc=`You landed on ${d.shortname}'s personal website! ^w^` rfgif="../../img/rf/welcome.gif" rfwarning={true}>
+<Layout title="Home" icon="waving-hand" head="Hi there~!" desc=`You landed on ${d.shortname}'s personal website! ^w^` rfgif="../../img/rf/welcome.gif" rfwarning={true}>
       <div>Who I am:
         <ul class="list nobullet">
         <li>💻 <b>I am a tech nerd</b> who happens to know a thing or two about coding.</li>
@@ -17,7 +17,7 @@ import Box from '../components/CollapsibleBox.astro';
         <div><b>Timezone:</b> UTC{d.timezone}</div>
       </div>
     <div class="grid">
-    <Box title="⭐ Buttons!">
+    <Box title="Buttons!" icon="star-rounded">
       <div class="button8831">
       <a href="https://axeon-network.github.io"><img src="/img/8831/axeon2.png" title="Axeon Network"></a>
       <a href="https://wetdry.world/@clyron"><img src="/img/8831/wetdryworld.png" title="Wet-Dry World"></a>
@@ -61,7 +61,7 @@ import Box from '../components/CollapsibleBox.astro';
      });
      </script>
     </Box>
-    <Box title="🪐 Webrings!">
+    <Box title="Webrings!" icon="planet-rounded">
       <div id="webring">
         <b><a href="https://fediring.net/">Fediring</a></b>
         <a class="button" href=`https://fediring.net/previous?host=${d.domain}` title="Previous Site">

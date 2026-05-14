@@ -52,16 +52,11 @@ body::after {
     height: 71px;
     padding-bottom: 1%;
 }
-.head,
-.section {
+.head {
     display: flex;
     flex-grow: 1;
     justify-content: space-between;
     align-items: center;
-}
-.device,
-.device .section {
-    display: block;
 }
 .content {
     animation: fade 0.3s ease-in-out;

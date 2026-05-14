@@ -1,14 +1,16 @@
 ---
+import { Icon } from 'astro-icon/components';
 interface Props {
 	title: string;
+  icon: string;
 }
-const { title } = Astro.props;
+const { title, icon } = Astro.props;
 ---
 <div>
   <br class="mof--hidden">
   <details>
     <summary>
-      <h2 class="section">{title}</h2>
+      <h2 class="section"><Icon name=`material-symbols:${icon}` />&nbsp;{title}</h2>
     </summary> <!-- details and summary tags aren't supported on ancient browsers -->
     <slot />
   </details>

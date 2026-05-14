@@ -1,13 +1,15 @@
 ---
 interface Props {
-	title: string;
+	title?: string;
 }
-const { title } = Astro.props;
+const { title = false } = Astro.props;
 ---
 <div>
   <br class="mof--hidden">
   <div class="box">
+    { title && (
       <h2 class="section">{title}</h2>
+    )}
     <slot />
    </div>
 </div>

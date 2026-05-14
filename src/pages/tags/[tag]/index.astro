@@ -39,7 +39,7 @@ taggedPosts.sort(
 );
 ---
 
-<Layout title="Blog" head="✏️ Blog!" desc=`Posts tagged with <code>${tag}</code>. <a href='/tags'>View all tags</a>`` showRssButton={true}>
+<Layout title="Blog" icon="stylus" head="Blog!" desc=`Posts tagged with <code>${tag}</code>. <a href='/tags'>View all tags</a>`` showRssButton={true}>
     {taggedPosts.map((post) => 
     <div id="blog">
         <ul>

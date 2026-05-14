@@ -3,7 +3,7 @@ import { Icon } from 'astro-icon/components';
 import Layout from '../layouts/Site.astro';
 ---
 
-<Layout title="Devices" head="💻 Devices!" desc="A list of devices that I own!">
+<Layout title="Devices" icon="laptop-windows-outline-rounded" head="Devices!" desc="A list of devices that I own!">
    <h2 class="section">Computers!</h2>
    <div class="device">
      <div id="device-specs">
@@ -63,11 +63,27 @@ import Layout from '../layouts/Site.astro';
       </div>
       <img id="device-img" src="/img/devices/thehaswelllappy.png">
    </div>
+      <div class="device reverse">
+      <div id="device-specs">
+        <div class="section">
+          <h3>HP Laptop 14s-fq0xxx <small>(HPLappy)</small></h3>
+          <h5><i>my testing machine!</i></h5>
+        </div>
+        <ul class="list">
+          <li><b>CPU:</b> AMD 3020e</li>
+          <li><b>GPU:</b> AMD Radeon RX Vega 3 <small>(integrated)</small></li>
+          <li><b>RAM:</b> 4GB DDR4</li>
+          <li><b>Storage:</b> 128GB Samsung SATA SSD</li>
+          <li><b>OS:</b> Windows 10 IoT LTSC 2021</li>
+        </ul>
+      </div>
+      <img id="device-img" src="/img/devices/hplappy.png">
+   </div>
    <h2 class="section">Phones!</h2>
       <ul class="list">
         <li><b>Samsung Galaxy A26 5G</b> (AveryPhone), running Android 16 with One UI 8 <small>(primary)</small></li>
         <li><b>Xiaomi Redmi 10 2022</b> (AveryPhone2), running Android 13 with MIUI 14 <small>(secondary)</small></li>
-        <li><b>Samsung Galaxy J5 2017</b> (AveryJ5), running Android 9 with One UI 1</li>
-        <li><b>Samsung Galaxy A23 5G</b>, running Android 14 with One UI 6</li>
+        <li><b>Samsung Galaxy J5 2017</b> (AveryJ5), running Android 9 with One UI 1 <small>(retro)</small></li>
+        <li><b>Samsung Galaxy A23 5G</b>, running Android 14 with One UI 6 <small>(backup)</small></li>
       </ul>
 </Layout>

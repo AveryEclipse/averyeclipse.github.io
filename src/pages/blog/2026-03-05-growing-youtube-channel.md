@@ -6,6 +6,8 @@ date: 5 March 2026
 tags: ["youtube"]
 ---
 
+*(UPDATE 14-05-2026: Added a new subsection "The "Triuosfjd" case" to the Lynxmic section)*
+
 I've been in the content creation space for **over a decade**. Since I was small. So thus I've accumulated some experience with growing a channel from scratch and by extension anything when it comes to YT's algorithm for some time.
 
 Most of what I know and learned from is from maintaining the [Lynxmic](https://youtube.com/Lynxmic) channel. Since I started that channel in 2016, for the longest time it was a ***big struggle*** to get it to grow.
@@ -86,7 +88,20 @@ So, the important things to note:
    - Then, the video itself. The better the editing is, the better your recordings are, the better your video is.
    - Though I should say that I'm not the best at giving examples so if you want the closest idea, stick around for the AstroNT section!
        - Generally for inspiration/ideas, *I'd recommend looking at other channels then drawing your conclusion based on what you're seeing.* Look at how other channels edit their videos, their quality etc.
-       
+
+## The "Triuosfjd" case
+Honestly? Chances that the algorithm pushes your content can still be pretty random at the end of the day. And if nothing in this blog post has been convincing enough to think about it, *this definitely might be one*.
+
+In late March 2026, I uploaded [a new video](https://youtu.be/MGIrR4j7vb0) to the Lynxmic channel for the first time since October 2025, where I was looking at a random strange Windows ISO I found on the internet the other day that was called "Triuosfjd" <small>(yes it was seriously called like that)</small>.
+
+The analytics in the first week are high-key surprising considering the over 5-month gap between uploads <small>(unusual considering past Lynxmic history)</small>:
+
+![](/img/blog/Screenshot_20260514_115700.png)
+
+No video from 2025 has gotten this many views. For one thing, I did not expect the algorithm to pick this video up to begin with. At this point I didn't really care about views or subscribers on Lynxmic as much as in 2025, and I had already decided to "return to the basics" here, as in "pre-2022 style", given that I already moved on to AstroNT. Nothing but proof you can be inactive for months and still have a chance.
+
+What I think also mattered here is the title + thumbnail combo *which is SO GOOD to the point it makes you wanna click on it*. Probably one of the most creative good-looking combos I've ever made imo. It really stands out.
+
 # A new start
 **In October 2025, I became part of a different YouTube channel project: [AstroNT](https://youtube.com/@AstroNTWorkstation)**. This basically marked my return to the content creation space after a six-month break.
 

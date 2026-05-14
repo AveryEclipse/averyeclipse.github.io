@@ -1,11 +1,11 @@
-import remarkBreaks from 'remark-breaks'; /* i shouldnt need to use a PLUGIN just to properly do a hard break ffs */
-import icon from "astro-icon";
 import { defineConfig } from 'astro/config';
+import icon from "astro-icon";
+import remarkBreaks from 'remark-breaks'; /* i shouldnt need to use a PLUGIN just to properly do a hard break ffs */
 
-// https://astro.build/config
 export default defineConfig({
-  integrations: [icon()],
   site: "http://avery.is-a.dev",
+  integrations: [icon()],
+  trailingSlash: "never",
   markdown: {
     remarkPlugins: [remarkBreaks],
   },

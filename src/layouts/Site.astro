@@ -2,13 +2,14 @@
 interface Props {
 	title: string;
 	head?: string;
+	icon: string;
 	desc: string;
 	rfgif?: string;
 	showRssButton?: boolean;
 	hideFooter?: boolean;
 	rfwarning?: boolean;
 }
-const { title, head, desc, rfgif, showRssButton = false, hideFooter = false, rfwarning = false } = Astro.props;
+const { title, head, icon, desc, rfgif, showRssButton = false, hideFooter = false, rfwarning = false } = Astro.props;
 const heading = head || title;
 import { d } from "../config.ts";
 import { Icon } from 'astro-icon/components';
@@ -28,16 +29,16 @@ import Footer from '../components/Footer.astro';
 		<link rel="icon" type="image/svg+xml" href=`${d.favicon}` />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="stylesheet" href="/css/style.rf.css" type="text/css">
-        <link rel="stylesheet" href="/css/style.css" type="text/css">
+		<link rel="stylesheet" href="/css/style.css" type="text/css">
 		<title>{title} ~ {d.name}</title>
 	</head>
 	<body>
         <Navbar />
          <div class="content">
-              <center><div class="mof--hidden gif"><img src={rfgif}></div></center>
+              <center><div class="mof--hidden gif"><img src={rfgif} alt=""></div></center>
 			<div class="head">
 			   <div>
-               <h1 id="title">{heading}</h1>
+               <h1 id="title"><Icon name=`material-symbols:${icon}` />&nbsp;{heading}</h1> <!-- todo: make nbsp not apply in rf -->
                <div set:html={desc}></div>
 			   </div>
 			   <div>

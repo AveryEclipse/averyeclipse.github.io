@@ -5,6 +5,9 @@ desc: "Discord doesn't really care that much"
 date: 20 May 2025
 tags: ["software", "discord", "linux"]
 ---
+
+*(UPDATE 12-05-2026: Discord [has addressed](https://youtu.be/BwNfmazmU4o) the issues with the Linux client pointed out in this blog post, while a proper title bar [was introduced](https://wetdry.world/@clyron/115821695108450201) months prior. Consider this a relic of the past)*
+
 It's no secret that the official Discord client for Linux is half-baked compared to its Windows and macOS counterparts. For a long time there already has been (and probably the most famous of all) Discord's updating system which always sucked on Linux and still does, but lately things only have been becoming more obvious with the client in general.
 
 # Update system

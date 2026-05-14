@@ -3,7 +3,7 @@
 <h1>AveryWebsite</h1>
 </div>
 <div align="center">
-<img alt="MIT License" src="https://img.shields.io/github/license/averyeclipse/averyeclipse.github.io?labelColor=orange&color=gray">
+<img alt="MIT License" src="https://img.shields.io/github/license/AveryEclipse/averyeclipse.github.io?labelColor=orange&color=gray">
 </div>
 
 This is the source code for my (AveryEclipse's) personal website located at [avery.is-a.dev](http://avery.is-a.dev).\
