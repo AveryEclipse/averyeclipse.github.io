@@ -151,6 +151,18 @@ button.button:disabled {
     opacity: 0.5;
     cursor: not-allowed;
 }
+.tag {
+    display: inline-block;
+    background-color: rgb(72, 70, 95);
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 5px 5px 5px 5px;
+    border: 5px 5px 5px 5px white;
+    text-decoration: none !important;
+    transition: 0.2s;
+}
 details, .box {
     border-radius: 15px 15px 15px 15px;
     border: 2px solid rgb(209, 202, 231);
@@ -255,20 +267,6 @@ summary::marker,
        width: 30%;
        height: auto;
     }
-.tag {
-    display: inline-block;
-    background-color: rgb(72, 70, 95);
-    color: rgb(209, 202, 231);
-    padding-top: 1px;
-    padding-bottom: 1px;
-    padding-left: 3px;
-    padding-right: 3px;
-    border-radius: 5px 5px 5px 5px;
-    border: 5px 5px 5px 5px white;
-    text-decoration: none !important;
-    font-style: normal;
-    transition: 0.2s;
-}
 .stars {
     position: fixed;
     inset: 0;
