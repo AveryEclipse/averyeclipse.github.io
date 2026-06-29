@@ -7,10 +7,10 @@ import { cfg } from "../config";
     <div><b>© {cfg.copyrightyear} {cfg.name}</b></div>
     <br>
     <details>
-        <summary>Show site info</summary>
-    <div><b><a href={cfg.sourcecode}>{pkg.name}</a>&nbsp;{pkg.version}</b> running on Astro {version}</div>
-    <div>Source code of this website is licensed under <a href={cfg.licenseurl}>{cfg.license}</a></div>
-    <div>Blog posts are licensed under <a href={cfg.bloglicenseurl}>{cfg.bloglicense}</a></div>
+        <summary><span class="rf--hidden">Show site info</span></summary>
+        <div><b><a href={cfg.sourcecode}>{pkg.name}</a>&nbsp;{pkg.version}</b> running on Astro {version}</div>
+        <div>Source code of this website is licensed under <a href={cfg.licenseurl}>{cfg.license}</a></div>
+        <div>Blog posts are licensed under <a href={cfg.bloglicenseurl}>{cfg.bloglicense}</a></div>
     </details>
     <noscript><br>⚠️&nbsp;<i>JavaScript is disabled, some website functionality may be limited</i>&nbsp;⚠️</noscript>
 </div></center>
