@@ -5,7 +5,7 @@ desc: "First phone upgrade in over 2 years"
 date: 29 June 2025
 tags: ["tech", "review", "phone"]
 ---
-[Last time](/lynxblog/2023/03/05/galaxy-a23-5g-one-month-review-why-switched.html), I said I will keep my previous phone (my then-new Galaxy A23 5G) as my main for at least 1-2 years. I initially got it in late January 2023, and it's been frankly almost 2 years and 6 months since then!
+Last time, I said I will keep my previous phone (my then-new Galaxy A23 5G) as my main for at least 1-2 years. I initially got it in late January 2023, and it's been frankly almost 2 years and 6 months since then!
 
 The initial plan later on was to keep this phone as my main for another 2 years before moving on to another phone, as I had thought that there was basically just barely any innovation 'n stuff nowadays or like just any reason whatsoever to upgrade my phone when it *was still working just fine*, and I thought I wasn't missing out on anything really.
 
@@ -17,7 +17,7 @@ With everything out of the way, the A23 5G was an actually good midrange Galaxy 
 
 However at the end of the day I just ended up getting a different phone: the **Galaxy A26 5G**. To my defense, it was just given to me in an all-new condition, *literally waiting to be set up. It was already powered on displaying the first-time setup experience*. I was literally just handed over the phone with its entire box and its contents, that's it.
 
-![i use android btw](/img/blog/41.png)
+![Fastfetch running on Termux](/img/blog/41.png)
 *i use android btw*
 
 # Basic specifications
@@ -49,7 +49,7 @@ Other than that, nothing much really significant about the A26 versus A23.
 # The software
 As previously said above, the Galaxy A26 5G comes with Android 15 (One UI 7). Unlike the A23 5G, the A26 5G is entitled for **6 major Android version upgrades**, which is a huge step-up meaning I won't have to worry about missing any new Android version for a while
 
-![](/img/blog/39.png)
+![Lock and home screens of One UI 7 on the A26 5G](/img/blog/39.png)
 
 Now say what you want about it but One UI 7 for me personally *geniunely feels like a refresher* compared to every previous One UI since 2019. At first when I saw One UI 7's look I was like eh, but when actually using it, it geniunely feels like a "new and exciting" thing, and so far never ran into any issues with the software specifically.
 
@@ -73,13 +73,13 @@ For some reason, just like with case with seamless updates (which I've already t
 # The camera
 The A26 5G camera has more features than the A23 5G's. We have especially new modes like Hyperlapse, Single Take, Pro Video and Super Slo-Mo.
 
-![](/img/blog/38.png)
+![Various camera options revealed by the A26 5G's camera app](/img/blog/38.png)
 
 One major feature not present on the A23 5G is the ability to change the shutter speed, possible on the A26 5G either by adjusting speed in Pro Video mode, or alternatively by enabling Super Steady in the main video mode, which I guess could help when trying to shoot from the window of a moving vehicle for example. None of such videos I made with previous phones turned out to be good. Will only have to test the next time I go on a trip though, then I can come to a conclusion.
 
 Oh, and as a bonus, apparently we have Snapchat Lenses?? (which are actually just face filters). BTW you'd have to switch to the Fun mode for this, but I did it just for the sake of exploration.
 
-![](/img/blog/40.png)
+![An Snapchat Lenses dialog](/img/blog/40.png)
 
 ---
 ...aaaand the blog post is concluded just like that. How much time will I keep this phone as my main? Hopefully at least 2 years again if not longer. Time will tell

@@ -1,4 +1,5 @@
 ---
+import { cfg } from "../config";
 import { Icon } from 'astro-icon/components';
 interface Props {
 	title: string;
@@ -8,10 +9,12 @@ const { title, icon } = Astro.props;
 ---
 <div>
   <br class="mof--hidden">
-  <details>
+  <details class="cbox">
     <summary>
-      <h2 class="section"><Icon name=`material-symbols:${icon}` />&nbsp;{title}</h2>
+      <h2 class="section"><Icon name=`${cfg.iconset}:${icon}` />&nbsp;{title}</h2>
     </summary> <!-- details and summary tags aren't supported on ancient browsers -->
-    <slot />
+    <div class="cboxcontent">
+      <slot />
+    </div>
   </details>
 </div>

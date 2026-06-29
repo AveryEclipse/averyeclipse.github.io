@@ -12,23 +12,44 @@ type BlogPost = {
   url: string;
 };
 
-const posts = Object.values(import.meta.glob("../../pages/blog/*.md", { eager: true })) as BlogPost[];
 
-posts.sort((a, b) => {
-  const dateA = new Date(a.frontmatter.date);
-  const dateB = new Date(b.frontmatter.date);
-  return dateB.getTime() - dateA.getTime();
-});
+export async function getStaticPaths() {
+
+  const POSTS_PER_PAGE = 10;
+
+  const posts = Object.values(
+    import.meta.glob("../../pages/blog/*.md", { eager: true })
+  ) as BlogPost[];
+
+  const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
+
+  return Array.from({ length: totalPages - 1 }, (_, i) => ({
+    params: {
+      page: String(i + 2),
+    },
+  }));
+}
+
+const posts = Object.values(
+  import.meta.glob("../../pages/blog/*.md", { eager: true })
+) as BlogPost[];
+
+posts.sort(
+  (a, b) =>
+    new Date(b.frontmatter.date).getTime() -
+    new Date(a.frontmatter.date).getTime()
+);
 
 const POSTS_PER_PAGE = 10;
 
 const currentPage = Number(Astro.params.page || 1);
-const page = 1;
 
 const start = (currentPage - 1) * POSTS_PER_PAGE;
-const end = start + POSTS_PER_PAGE;
 
-const paginatedPosts = posts.slice(start, end);
+const paginatedPosts = posts.slice(
+  start,
+  start + POSTS_PER_PAGE
+);
 
 const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
 
@@ -46,13 +67,12 @@ const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
   totalPages > 1 && (
    <center><div class="pagination">
     {
-  Array.from({ length: totalPages }, (_: undefined, i: number) => {
-      const page = i + 1;
-      return (
-     <a class="button" href={page === 1 ? "/blog" : `/blog/${page}`}>{i + 1}</a>
-    )
-  })
-    }
-   </div></center>
+      Array.from({ length: totalPages }, (_: undefined, i: number) => {
+        const page = i + 1;
+        return (
+          <a class="button" href={page === 1 ? "/blog" : `/blog/${page}`}>{i + 1}</a>
+        )
+    })}
+    </div></center>
 )}
 </Layout>

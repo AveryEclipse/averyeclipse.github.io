@@ -45,7 +45,7 @@ Important to keep in mind is that the `@supports` rule has been only available a
 
 So as of right now this website **loads on IE11 well enough** to say. 
 
-![](/img/blog/42.png)
+![This website's modern frontend in IE11](/img/blog/42.png)
 
 There are several issues that still need to be addressed like the whole "click to copy 88x31 HTML code to clipboard thing" not working or the footer and webrings not being properly centered (which can be attributed to IE11's flexbox support being pretty "ehhy")
 
@@ -57,7 +57,7 @@ So on to the next phase of bringing this website to work on ancient browsers!\
 
 For this phase I decided to set up a VM with Windows XP *MCE 2005* <small>(I usually do Professional but decided to try something different)</small>, which came with Internet Explorer 7 out of the box. Here's v3.0 of this website on IE7:
 
-![](/img/blog/43.png)
+![This website on IE7, showing broken logo and no background](/img/blog/43.png)
 
 I was expecting something better. Even worse, between the "*Hi there!~*" and the navbar there is a singular weird shape (which is actually a partial star). I was able to easily get this issue addressed (at least for IE) by moving the CSS code associated with the stars in the navbar inside a `@supports`.
 
@@ -70,18 +70,19 @@ I've already fixed the star issue for IE as said earlier, but for some reason Pr
 
 Meanwhile on Safari, we have what I'd definitely call "the most cursed thing I have ever seen as a webdev": the lack of navbar. Like, *where did it go?!?!?*
 
-![](/img/blog/45.png)
+![This website in Safari for Windows, with no navbar visible](/img/blog/45.png)
 
 Now maybe maaayybeeee it might not have been the "most cursed thing" after all. The problem here was that the animation just wasn't playing in Safari, to put it in simple words. So the whole navbar was stuck at zero opacity. I moved all CSS code associated with the navbar's animations inside a `@supports` and that fixed it!\
 Of course there were other issues (like links or blog tags not displaying properly) but like with other aspects of the site, I've also resorted to fallbacks here as well <small>(the power of `@supports` frfr)</small>
 
 Another issue was that images in blog posts did not load at all. For some reason, Astro <small>(in particular the v5.x versions this website uses)</small> tends to """optimize images""" and convert them to **WebP**, a file format only supported by modern browsers. Unfortunately the best workaround I could find here was switching to absolute URLs.
+*<small>(UPDATE 04-06-2026: I've since discovered a way to bypass Astro's image optimization without using absolute URLs, the problem lied in me using `../../`)</small>*
 
 ***The final step was to essentially ditch Flexbox and Grid entirely***. Support for them in older browsers is either hit-or-miss or absent entirely, so I've switched the navbar, footer etc to use `display: block` and `text-align: center` instead, in order for them to stay centered regardless if the browser used is ancient or not.
 
 Aaaand there you have it. A website **that works on browsers as old as IE7, Opera Presto and Safari on Windows**.
 
-![](/img/blog/46.png)
+![This website on IE7, after fixing the issues mentioned earlier](/img/blog/46.png)
 
 As you can see I also decided to try monospaced fonts as a fallback if the default font(s) do not load. I am not sure-sure if I like it or not, but at this point *I have more ambitious ideas in mind, which I'm however leaving for until the right time comes :p*.
 
@@ -112,9 +113,9 @@ The current website layout is well suited as it's mostly text, as opposed to car
 
 ### Actually building it
 To start with, I went to look up for a good background image for a 90s website. So the first thing I did was google "*good backgrounds for retro website*". However that turned out to be the best example of Google not giving relevant search results that I could get.\
-Most of the search results were """retro backgrounds""" sourced from stock image providers that have literally have nothing to do with what I'm searching for! And y'know what's the most hilarious part? The "People also search for" checkbox:
+Most of the search results were """retro backgrounds""" sourced from stock image providers that have literally have nothing to do with what I'm searching for! And y'know what's the most hilarious part? The "People also search for" list:
 
-![](/img/blog/47.png)
+![Suggestions completely unrelated to my Google search query for 'good backgrounds for retro website'](/img/blog/47.png)
 
 Yes Google you can be sure if I search for 90s site backgrounds, I also search for AI Image Editing tools. Two things from two different internet eras...\
 Jokes aside, in the end I found [GifCities](https://gifcities.org/) *from Internet Archive themselves* where I was finally able to find exactly what I was looking for~
@@ -129,7 +130,7 @@ I was able to finally hide the stars in Presto now knowing what's actually going
 Anyway, now that we have a Retro Frontend, that now ensures support for browsers as old as IE5!\
 So, as a matter of fact, ***it is now possible to access this website on OSes as old as Windows 95!*** <small>(an almost 30-year-old OS!)</small>
 
-![](/img/blog/48.png)
+![This website's Retro Frontend running on IE5 under Windows 95](/img/blog/48.png)
 
 It is actually super duper amazing that I managed to go down this far while not affecting the "modern frontend" *that much* and I honestly cannot wait to get this out (of "beta") :D
 
@@ -141,7 +142,7 @@ For the sake of it I decided to test this website on even older browsers. **Unfo
 Meanwhile I've also tested the website on **Netscape 4**, however it won't work with the website's CSS *at all*. The output is no different than if I just deleted or renamed `style.css` within my file manager then start the Astro dev server and preview the site locally on my modern browser\
 Same goes for basically any browser that lacks CSS support entirely, such as earlier versions of IE and Netscape etc. *Not the end of the world though*, we can adapt the HTML!
 
-![](/img/blog/44.png)
+![This website on Netscape 4](/img/blog/44.png)
 
 So there you have it, a **Plaintext Mode**. In theory this website should now be able to display almost-if-not-fully properly on every *graphical* web browser.\
 The only differences between this and the CSS Retro Frontend are the lack of a website background and lack of proper padding in some areas, *which are not really that big of a deal*.

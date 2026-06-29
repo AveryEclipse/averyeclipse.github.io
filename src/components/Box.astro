@@ -1,14 +1,25 @@
 ---
+import { cfg } from "../config";
+import { Icon } from 'astro-icon/components';
 interface Props {
+  header?: boolean;
 	title?: string;
+  icon?: string;
 }
-const { title = false } = Astro.props;
+const { header, title = false, icon = false } = Astro.props;
 ---
 <div>
   <br class="mof--hidden">
   <div class="box">
-    { title && (
-      <h2 class="section">{title}</h2>
+    { header && (
+    <h2 class="section">
+      { icon && (
+        <Icon name=`${cfg.iconset}:${icon}` />
+      )}
+      { title && (
+        <span>{title}</span>
+      )}
+    </h2>
     )}
     <slot />
    </div>

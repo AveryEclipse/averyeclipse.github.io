@@ -1,15 +1,16 @@
 ---
-import { d } from "../config";
 import pkg from '../../package.json';
-export const name = pkg.name;
-export const version = pkg.version;
+import { version } from 'astro/package.json';
+import { cfg } from "../config";
 ---
-<center><div class="content footer">
-    <div><b>© {d.copyrightyear} {d.name}</b></div>
+<center><div class="footer">
+    <div><b>© {cfg.copyrightyear} {cfg.name}</b></div>
     <br>
-    <div><b><a href=`http://github.com/${d.sourcecode}`>{name}</a>&nbsp;{version}</b></div>
-    <div>Source code of this website is licensed under <a href="https://opensource.org/license/mit">MIT</a></div>
-    <div>Blog posts are licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></div>
+    <details>
+        <summary>Show site info</summary>
+    <div><b><a href={cfg.sourcecode}>{pkg.name}</a>&nbsp;{pkg.version}</b> running on Astro {version}</div>
+    <div>Source code of this website is licensed under <a href={cfg.licenseurl}>{cfg.license}</a></div>
+    <div>Blog posts are licensed under <a href={cfg.bloglicenseurl}>{cfg.bloglicense}</a></div>
+    </details>
     <noscript><br>⚠️&nbsp;<i>JavaScript is disabled, some website functionality may be limited</i>&nbsp;⚠️</noscript>
-    <div id="nocss"><br><b>[!]</b>&nbsp;<i>Website is in pure plaintext mode, which is not officially supported. Your browser may be too old to support CSS. If you believe this is a bug, please raise an issue on GitHub</i>&nbsp;<b>[!]</b></div>
 </div></center>

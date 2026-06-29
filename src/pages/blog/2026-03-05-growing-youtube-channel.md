@@ -23,15 +23,15 @@ Now one important thing to know, and that's the fact Shorts didn't exist until 2
 After being stuck under 30 subs for almost two years, the Lynxmic channel then known as *Solarix* finally started to somewhat grow in late 2018. ***But there's an aterisk.***
 The videos that have been giving the channel most subscribers and views around this time were mostly "How to get X Rich Presence on Discord" videos or those from the "Discord.js Bot Tutorial" series.
 
-![](/img/blog/Screenshot_20260121_180618.png)
+![Most popular Lynxmic videos in 2018](/img/blog/Screenshot_20260121_180618.png)
 
 If we break down by Traffic source, a majority of the views come from **External** or **YouTube search**.
 
-![](/img/blog/Screenshot_20260121_180430.png)
+![External and YouTube search dominate traffic source for Lynxmic videos in 2018](/img/blog/Screenshot_20260121_180430.png)
 
 Most of the views coming from "external sources" were from Google Search.
 
-![](/img/blog/Screenshot_20260121_180527.png)
+![Google Search being on the top by views from external sources with a whopping 83.7%](/img/blog/Screenshot_20260121_180527.png)
 
 Now was it a "good thing"? Maybe in the short-term, but in the long-term? *I don't think so*. 
 
@@ -46,7 +46,7 @@ Any growth is good, but this wasn't sustainable. I made content, but I barely go
 ---
 
 Now thinking about it, *maybe I actually felt like having a third channel was a good idea at the time without realizing it?*
-In fact those who were around for me long enough might remember [NightskyArchive](2024-12-31-wrapping-up-2024#the-rise-and-fall-of-nightskyarchive-and-whirlbox), which used to be my "media perservation"-focused channel which I since deleted. It started as a "tech tutorial" channel before later evolving into *Codarix*, a coding-focused channel.
+In fact those who were around for me long enough might remember [NightskyArchive](../2024-12-31-wrapping-up-2024#the-rise-and-fall-of-nightskyarchive-and-whirlbox), which used to be my "media perservation"-focused channel which I since deleted. It started as a "tech tutorial" channel before later evolving into *Codarix*, a coding-focused channel.
 And considering the programming/IDE videos were for some reason more popular than my other videos, maybe it would actually been a good idea if Codarix happened earlier sticking just to the programming/IDE videos?
 
 At that point it was already pretty much too late either way, since Spring 2019 my channel has struggled to grow past the 75-90 subscriber range, and things wouldn't improve until 2022, when it finally hit 100 subs for good and never dropped below that threshold again.
@@ -58,7 +58,7 @@ Did I expect it? *No.* At this point I didn't expect anything after struggling t
 
 *What actually happened* is that by 2023 YouTube appeared to have changed their algorithm *and in a positive way for small channels like mine was*. Below you can see views by traffic source between 1 January 2018 and 31 December 2024:
 
-![](/img/blog/Screenshot_20260121_190004.png)
+![Views by Traffic source for the Lynxmic channel between 2018 and 2024](/img/blog/Screenshot_20260121_190004.png)
 
 By far, **Browse features** dominates. It means traffic from the "homepage/home screen, the subscription feed, and other browsing features" but at this stage ***it means the actual YouTube Algorithm is pushing your channel and videos to people that are truly interested***.
 Only thanks to the algorithm, the Lynxmic channel picked back up in growth again while getting an audience that is actually (even somewhat) loyal to the channel and actually watches the videos that I've been posting there.
@@ -96,7 +96,7 @@ In late March 2026, I uploaded [a new video](https://youtu.be/MGIrR4j7vb0) to th
 
 The analytics in the first week are high-key surprising considering the over 5-month gap between uploads <small>(unusual considering past Lynxmic history)</small>:
 
-![](/img/blog/Screenshot_20260514_115700.png)
+![Analytics for the Triuosfjd video in the first week of it being uploaded](/img/blog/Screenshot_20260514_115700.png)
 
 No video from 2025 has gotten this many views. For one thing, I did not expect the algorithm to pick this video up to begin with. At this point I didn't really care about views or subscribers on Lynxmic as much as in 2025, and I had already decided to "return to the basics" here, as in "pre-2022 style", given that I already moved on to AstroNT. Nothing but proof you can be inactive for months and still have a chance.
 
@@ -118,18 +118,18 @@ Even if we look at the Top 25 most popular Lynxmic videos right now, *every sing
 
 *Anyway* back to the 8Store video, guess what happened after a week of it being out!
 
-![](/img/blog/49.png)
+![Analytics of the 8Store video as it began to blow up in views](/img/blog/49.png)
 
 **Notice the clear spike in both views from Browse features and Suggested videos?** That means YouTube's Algorithm is pushing the video and the AstroNT channel got its place on the map! *So far so good ^w^*
 
 I knew what to do from here this time, thanks to the Lynxmic 2024 experience I've previously mentioned: *push [another video](https://www.youtube.com/watch?v=LUOepiPfsRg)*. How did it perform in the first few hours?
 
-![](/img/blog/50.png)
+![Analytics of the ExplorerEx video in its first few hours since being out](/img/blog/50.png)
 
 Remember, *this is literally just your ordinary Windows-related video.* It's nothing wow, even less than 5001 via DOS.
 Now let's check the analytics for the entire channel *right now as I'm writing this blog post*:
 
-![](/img/blog/Screenshot_20260305_060851.png)
+![Analytics of the entire AstroNT channel in the past 28 days as of 3 March 2026](/img/blog/Screenshot_20260305_060851.png)
 
 Granted it's past the peak, but **almost 300 subscribers in just almost half a year** since the AstroNT channel was originally created in September 2025, of which most of it gained within 1.5 weeks ***is impressive!***
 There's still work to do though, and for that ideally all what's needed is to keep up with the videos as they are, staying consistent with the current uploading schedule, which so far ended up to be 2 videos per month. *No rush. No hurry.*

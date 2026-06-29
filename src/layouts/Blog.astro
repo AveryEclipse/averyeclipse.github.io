@@ -1,72 +1,36 @@
 ---
 const { frontmatter, headings } = Astro.props;
-import { d } from "../config";
+import { cfg } from "../config";
+
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
-import Box from '../components/Box.astro';
-
-let currentH1 = null;
-const tree = [];
-
-for (const h of headings) {
-  if (h.depth === 1) {
-    currentH1 = { ...h, children: [] };
-    tree.push(currentH1);
-  }
-
-  if (h.depth === 2 && currentH1) {
-    currentH1.children.push(h);
-  }
-}
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
+  <head>
+
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta property="og:site_name" content=`${d.shortname}'s Blog!` />
-    <meta property="og:image" content=`${Astro.site}${d.favicon}`>
+    <meta property="og:site_name" content=`${cfg.shortname}'s Blog!` />
+    <meta property="og:image" content={cfg.favicon} />
     <meta name="title" content={frontmatter.title} />
     <meta name="description" content={frontmatter.desc} />
-		<link rel="icon" type="image/svg+xml" href=`${d.favicon}` />
-    <meta name="generator" content={Astro.generator} />
-		<link rel="stylesheet" href="/css/style.rf.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.rf.css" type="text/css">
     <link rel="stylesheet" href="/css/style.css" type="text/css">
-		<title>{frontmatter.title} ~ {d.name}</title>
-	</head>
-	<body>
+    <link rel="icon" type="image/svg+xml" href={cfg.favicon} />
+    <title>{frontmatter.title} ~ {cfg.name}</title>
+  </head>
+  <body>
     <Navbar />
-        <div class="content blogpost">
+      <div class="content blog">
         <div class="head blog">
-        <h1 id="title">{frontmatter.title}</h1>
-        <div>{frontmatter.date}&nbsp;&nbsp;•&nbsp;&nbsp;<i style="font-size:1.1rem">{frontmatter.desc || 'No description available'}</i></div>
-        <div>{frontmatter.tags && (<ul id="tagarray" class="">{frontmatter.tags.map(tag => (<li><a class="tag" href={`/tags/${encodeURIComponent(tag)}/`}>{tag}</a></li>))}</ul>)}</div>
+          <h1 id="title">{frontmatter.title}</h1>
+          <div>{frontmatter.date}&nbsp;&nbsp;•&nbsp;&nbsp;<i>{frontmatter.desc || 'No description available'}</i></div>
+          <div>{frontmatter.tags && frontmatter.tags.map(tag => (<a class="tag" href={`/tags/${encodeURIComponent(tag)}/`}>{tag}</a>))}</div>
         </div>
-           <div>
-            {tree.length > 0 && (
-           <Box title="In this article...">
-            <div class="toc">
-           <ul>
-              {tree.map((h1) => (
-                <li>
-                  <a href={`#${h1.slug}`}>{h1.text}</a>
-                 {h1.children.length > 0 && (
-                  <ul>
-                    {h1.children.map((h2) => (
-                       <li><a href={`#${h2.slug}`}>{h2.text}</a></li>
-                     ))}
-                  </ul>
-                  )}
-                </li>
-              ))}
-          </ul>
-         </div>
-         </Box>
-         )}
-	        	<slot />
-           </div>
-         </div>
-         <Footer />
-	</body>
+        <slot />
+      </div>
+      <Footer />
+  </body>
 </html>

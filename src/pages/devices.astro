@@ -3,12 +3,10 @@ import { Icon } from 'astro-icon/components';
 import Layout from '../layouts/Site.astro';
 ---
 
-<Layout title="Devices" icon="laptop-windows-outline-rounded" head="Devices!" desc="A list of devices that I own!">
-   <h2 class="section">Computers!</h2>
-   <div class="device">
-     <div id="device-specs">
+<Layout icon="laptop-windows-outline-rounded" title="Devices" desc="What I have!">
+   <div class="box">
        <div class="section">
-         <h3>Lenovo IdeaPad 1 15ALC7 <small>(AveryLappy)</small></h3>
+         <h3><Icon name="material-symbols:laptop-windows-outline-rounded" />&nbsp;Lenovo IdeaPad 1 15ALC7 <small>(AveryLappy)</small></h3>
          <h5><i>my main PC!</i></h5>
        </div>
        <ul class="list">
@@ -19,17 +17,27 @@ import Layout from '../layouts/Site.astro';
          <li><b>OS:</b>
            <ul>
              <li>Arch Linux with KDE Plasma <small>(primary)</small></li>
-             <li>Windows 10 IoT LTSC 2021 <small>(secondary)</small></li>
+             <li>Windows 11 Pro 25H2 <small>(secondary)</small></li>
            </ul>
          </li>
        </ul>
-      </div>
-      <img id="device-img" src="/img/devices/averylappy.png">
    </div>
-   <div class="device reverse">
-      <div id="device-specs">
+  <div class="box">
         <div class="section">
-          <h3>Lenovo ThinkPad T61 <small>(AveryThinkPad)</small></h3>
+          <h3><Icon name="material-symbols:laptop-windows-outline-rounded" />&nbsp;HP Laptop 14s-fq0xxx <small>(HPLappy)</small></h3>
+          <h5><i>my testing machine!</i></h5>
+        </div>
+        <ul class="list">
+          <li><b>CPU:</b> AMD 3020e</li>
+          <li><b>GPU:</b> AMD Radeon RX Vega 3 <small>(integrated)</small></li>
+          <li><b>RAM:</b> 4GB DDR4</li>
+          <li><b>Storage:</b> 128GB Samsung SATA SSD</li>
+          <li><b>OS:</b> Windows 10 IoT LTSC 2021</li>
+        </ul>
+   </div>
+   <div class="box">
+        <div class="section">
+          <h3><Icon name="material-symbols:laptop-windows-outline-rounded" />&nbsp;Lenovo ThinkPad T61 <small>(AveryThinkPad)</small></h3>
           <h5><i>my retro machine!</i></h5>
         </div>
         <ul class="list">
@@ -39,13 +47,10 @@ import Layout from '../layouts/Site.astro';
           <li><b>Storage:</b> 150GB Hitachi HDD</li>
           <li><b>OS:</b> Windows Vista Ultimate SP2 x64</li>
         </ul>
-      </div>
-      <img id="device-img" src="/img/devices/averypad.png">
    </div>
-   <div class="device">
-      <div id="device-specs">
+   <div class="box">
         <div class="section">
-          <h3>Lenovo G50-70 <small>(TheHaswellLappy)</small></h3>
+          <h3><Icon name="material-symbols:laptop-windows-outline-rounded" />&nbsp;Lenovo G50-70 <small>(TheHaswellLappy)</small></h3>
           <h5><i>my old main PC!</i></h5>
         </div>
         <ul class="list">
@@ -60,30 +65,16 @@ import Layout from '../layouts/Site.astro';
           </li>
           <li><b>OS:</b> Windows 8.1 Pro x64</li>
         </ul>
-      </div>
-      <img id="device-img" src="/img/devices/thehaswelllappy.png">
    </div>
-      <div class="device reverse">
-      <div id="device-specs">
-        <div class="section">
-          <h3>HP Laptop 14s-fq0xxx <small>(HPLappy)</small></h3>
-          <h5><i>my testing machine!</i></h5>
-        </div>
+    <div class="box">
+      <div class="section">
+        <h3><Icon name="material-symbols:smartphone" />&nbsp;Phones</h3>
+      </div>
         <ul class="list">
-          <li><b>CPU:</b> AMD 3020e</li>
-          <li><b>GPU:</b> AMD Radeon RX Vega 3 <small>(integrated)</small></li>
-          <li><b>RAM:</b> 4GB DDR4</li>
-          <li><b>Storage:</b> 128GB Samsung SATA SSD</li>
-          <li><b>OS:</b> Windows 10 IoT LTSC 2021</li>
-        </ul>
-      </div>
-      <img id="device-img" src="/img/devices/hplappy.png">
+          <li><b>Samsung Galaxy A26 5G</b> (AveryPhone), running Android 16 with One UI 8 <small>(primary)</small></li>
+          <li><b>Xiaomi Redmi 10 2022</b> (AveryPhone2), running Android 13 with MIUI 14 <small>(secondary)</small></li>
+          <li><b>Samsung Galaxy J5 2017</b> (AveryJ5), running Android 9 with One UI 1 <small>(retro)</small></li>
+          <li><b>Samsung Galaxy A23 5G</b>, running Android 14 with One UI 6 <small>(backup)</small></li>
+       </ul>
    </div>
-   <h2 class="section">Phones!</h2>
-      <ul class="list">
-        <li><b>Samsung Galaxy A26 5G</b> (AveryPhone), running Android 16 with One UI 8 <small>(primary)</small></li>
-        <li><b>Xiaomi Redmi 10 2022</b> (AveryPhone2), running Android 13 with MIUI 14 <small>(secondary)</small></li>
-        <li><b>Samsung Galaxy J5 2017</b> (AveryJ5), running Android 9 with One UI 1 <small>(retro)</small></li>
-        <li><b>Samsung Galaxy A23 5G</b>, running Android 14 with One UI 6 <small>(backup)</small></li>
-      </ul>
 </Layout>

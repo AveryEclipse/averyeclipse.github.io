@@ -1,44 +1,46 @@
 ---
-import { d } from "../config";
+import { cfg } from "../config";
 import { Icon } from 'astro-icon/components';
 import Layout from '../layouts/Site.astro';
 import Box from '../components/CollapsibleBox.astro';
+const name = cfg.shortname || cfg.name;
 ---
 
-<Layout title="Home" icon="waving-hand" head="Hi there~!" desc=`You landed on ${d.shortname}'s personal website! ^w^` rfgif="../../img/rf/welcome.gif" rfwarning={true}>
+<Layout icon="waving-hand-rounded" title="Home" head="Hi there~!" desc=`You landed on ${name}'s personal website! ^w^`>
       <div>Who I am:
-        <ul class="list nobullet">
-        <li>💻 <b>I am a tech nerd</b> who happens to know a thing or two about coding.</li>
-        <li>📹 <b>I make videos</b> on YouTube about things I like and enjoy.</li>
-        <li>💖 <b>Part-time</b> gamer and visual artist.</li>
+        <ul class="list" id="nobullet">
+        <li><span class="rf--hidden">💻</span> <b>Tech nerd</b> who happens to know a thing or two about coding</li>
+        <li><span class="rf--hidden">📹</span> <b>Content creator</b> on YouTube</li>
+        <li><span class="rf--hidden">🖼️</span> Part-time <b>visual artist</b></li>
+        <li><span class="rf--hidden">🌸</span> Just a <b>pretty girlypop,,</b> :3</li>
         </ul>
         <br>
-        <div><b>Pronouns:</b> {d.pronouns}</div>
-        <div><b>Timezone:</b> UTC{d.timezone}</div>
+        { cfg.pronouns && ( <div><b>Pronouns:</b> {cfg.pronouns} <small>{ cfg.pronounsPage && (<span>(<a href={cfg.pronounsPage}>pronouns and terms</a>)</span>)}</small></div> )}
+        { cfg.timezone && ( <div><b>Timezone:</b> UTC{cfg.timezone}</div> )}
+        { cfg.location && ( <div><b>Based in:</b> {cfg.location}</div> )}
       </div>
     <div class="grid">
-    <Box title="Buttons!" icon="star-rounded">
-      <div class="button8831">
-      <a href="https://axeon-network.github.io"><img src="/img/8831/axeon2.png" title="Axeon Network"></a>
-      <a href="https://wetdry.world/@clyron"><img src="/img/8831/wetdryworld.png" title="Wet-Dry World"></a>
-      <a href="http://bsky.app/profile/did:plc:fqvzbqsjzjkl4o66rfp6cgk3"><img src="/img/8831/bluesky.gif" title="Bluesky"></a>
-      <img src="/img/8831/gnu-linux.gif" title="Made on GNU/Linux">
-      <a href="https://archlinux.org"><img src="/img/8831/archlinux.gif" title="Arch Linux"></a>
-      <a href="https://code.visualstudio.com/"><img src="/img/8831/vscode.gif" title="Visual Studio Code"></a>
-      <img src="/img/8831/ublockoriginnow.png" title="uBlock Origin Now">
-      <img src="/img/8831/ieexplode.gif" title="Internet Exploder">
-      <img src="/img/8831/saynotoweb3.gif" title="Say no to Web3">
-      <img src="/img/8831/eyes.gif" title="Best viewed with EYES">
-      <img src="/img/8831/valid-any.gif" title="Any Browser!">
-      <a href="https://googleballs.com"><img src="/img/8831/googleballs.png" title="Google Balls!!"></a>
-      <a href="https://nixie.starlightnet.work" class="rf--hidden"><img src="https://nixie.starlightnet.work/?fg=eeeeee&bg=111111&pixel=1" alt="view counter"></a>
-      </div>
+    <Box title="Buttons" icon="star-rounded">
+      <a href="https://axeon-network.github.io"><img src="/img/8831/axeon.png" title="Axeon Network" alt="Axeon Network"></a>
+      <a href="https://youtube.com/@AstroNTWorkstation"><img src="/img/8831/astront.png" title="AstroNT" alt="AstroNT"></a>
+      <a href="https://wetdry.world/@clyron"><img src="/img/8831/wetdryworld.png" title="Wet-Dry World" alt="Wet-Dry World"></a>
+      <a href="http://bsky.app/profile/did:plc:fqvzbqsjzjkl4o66rfp6cgk3"><img src="/img/8831/bluesky.gif" title="Bluesky" alt="Bluesky"></a>
+      <img src="/img/8831/gnu-linux.gif" title="Made on GNU/Linux" alt="Made on GNU/Linux">
+      <a href="https://archlinux.org"><img src="/img/8831/archlinux.gif" title="Arch Linux" alt="Arch Linux"></a>
+      <a href="https://code.visualstudio.com"><img src="/img/8831/vscode.gif" title="Visual Studio Code" alt="Visual Studio Code"></a>
+      <a href="https://krita.org"><img src="/img/8831/krita.png" title="Krita" alt="Krita"></a>  
+      <img src="/img/8831/ublockoriginnow.png" title="uBlock Origin Now" alt="uBlock Origin Now">
+      <img src="/img/8831/ieexplode.gif" title="Internet Exploder" alt="Internet Exploder">
+      <img src="/img/8831/saynotoweb3.gif" title="Say no to Web3" alt="Say no to Web3">
+      <img src="/img/8831/eyes.gif" title="Best viewed with EYES" alt="Best viewed with EYES">
+      <img src="/img/8831/valid-any.gif" title="Any Browser!" alt="Any Browser!">
+      <a href="https://googleballs.com"><img src="/img/8831/googleballs.png" title="Google Balls!!" alt="Google Balls!!"></a>
+      <img src="/img/8831/badapple.avif" title="Bad Apple" alt="Bad Apple">
       <div>
          <div style="padding-top:10px; padding-bottom:10px;"><b>My buttons!</b></div>
-         <img src="/img/8831/avery1.png" class="mybutton" data-copy=`&lt;a href="http://${d.domain}"&gt;&lt;img src="http://${d.domain}/img/8831/avery1.png"&gt;` style="cursor:pointer;">
-         <img src="/img/8831/avery2.png" class="mybutton" data-copy=`&lt;a href="http://${d.domain}"&gt;&lt;img src="http://${d.domain}/img/8831/avery2.png"&gt;` style="cursor:pointer;">
+         <img src="/img/8831/avery1.png" alt="AveryEclipse button 1" class="mybutton" data-copy=`&lt;a href="http://${cfg.domain}"&gt;&lt;img src="http://${cfg.domain}/img/8831/avery1.png"&gt;` style="cursor:pointer;">
+         <img src="/img/8831/avery2.png" alt="AveryEclipse button 2" class="mybutton" data-copy=`&lt;a href="http://${cfg.domain}"&gt;&lt;img src="http://${cfg.domain}/img/8831/avery2.png"&gt;` style="cursor:pointer;">
          <div id="clicktocopy" class="rf--hidden"></div>
-         </div>
          <script>
             const status = document.getElementById('clicktocopy');
 
@@ -59,18 +61,17 @@ import Box from '../components/CollapsibleBox.astro';
            });
          });
      });
-     </script>
-    </Box>
-    <Box title="Webrings!" icon="planet-rounded">
-      <div id="webring">
-        <b><a href="https://fediring.net/">Fediring</a></b>
-        <a class="button" href=`https://fediring.net/previous?host=${d.domain}` title="Previous Site">
-          <Icon name="material-symbols:arrow-back-rounded" /><span id="link" class="mof--hidden">&lt;&#45;&#45;</span></a>
-        <a class="button" href="https://fediring.net/random" title="Random Site">
-          <Icon name="material-symbols:shuffle" /><span id="link" class="mof--hidden">Random</span></a>
-        <a class="button" href=`https://fediring.net/next?host=${d.domain}` title="Next Site">
-          <Icon name="material-symbols:arrow-forward-rounded" /><span id="link" class="mof--hidden">&#45;&#45;&gt;</span></a>
+      </script>
       </div>
+    </Box>
+    <Box title="Webrings" icon="planet-rounded">
+        <b><a href="https://fediring.net/">Fediring</a></b>
+        <a class="button" href=`https://fediring.net/previous?host=${cfg.domain}` title="Previous Site">
+          <Icon name=`${cfg.iconset}:arrow-back-rounded` /><span class="mof--hidden">&lt;&#45;&#45;</span></a>
+        <a class="button" href="https://fediring.net/random" title="Random Site">
+          <Icon name=`${cfg.iconset}:shuffle` /><span class="mof--hidden">Random</span></a>
+        <a class="button" href=`https://fediring.net/next?host=${cfg.domain}` title="Next Site">
+          <Icon name=`${cfg.iconset}:arrow-forward-rounded` /><span class="mof--hidden">&#45;&#45;&gt;</span></a>
     </Box>
     </div>
 </Layout>
