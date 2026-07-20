@@ -11,26 +11,20 @@ export default defineConfig({
   markdown: {
     processor: unified({remarkPlugins: [breaks, rehype, slug, [toc, {
       customizeTOC(toc) {
-      const hasEntries =
-        toc.children?.some(
-          child =>
-            child.tagName === 'ol' &&
-            child.children?.length
+        const hasEntries = toc.children?.some(
+          child => child.tagName === 'ol' && child.children?.length
         );
-      if (hasEntries) {
-        return {
-          type: 'element', tagName: 'div', properties: {
-          className: ['box']
-        }, children: [
-            { type: 'element', tagName: 'h2', properties: {className: ['section']}, children: [{ type: 'text', value: 'In this article...' }]},
-            toc
-          ]
-        }
-      } else {
+        if (hasEntries) {
+          return {
+            type: 'element', tagName: 'div', properties: {className: ['box']}, children: [
+              { type: 'element', tagName: 'h2', children: [{ type: 'text', value: 'In this article...' }]},
+              toc
+            ]
+          }
+        } else {
         return null;
+        }
       }
-}
-    }]],
-  }),
+    }]]}),
   }
 });

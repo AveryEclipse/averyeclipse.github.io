@@ -32,11 +32,8 @@ import Footer from '../components/Footer.astro';
         <Navbar />
          <div class="content">
             <div class="head">
-                <h1 id="title">
-                    <Icon name=`${cfg.iconset}:${icon}` />
-                    {heading}
-                </h1>
-                <div set:html={desc}></div>
+                <h1><Icon name=`${cfg.iconset}:${icon}` />{heading}</h1>
+                <i><div set:html={desc}></div></i>
             </div>
         <slot />
         </div>

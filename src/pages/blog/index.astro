@@ -31,28 +31,27 @@ const end = start + POSTS_PER_PAGE;
 const paginatedPosts = posts.slice(start, end);
 
 const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
-
 ---
 
 <Layout icon="stylus" title="Blog" desc="Where I yap about random things! <a href='../feed.xml'>Also available on RSS</a>">
-    {paginatedPosts.map((post) => 
-    <Box>
-      <div><h2><a href={post.url}>{post.frontmatter.title}</a></h2></div>
-      <div>{post.frontmatter.date}&nbsp;&nbsp;•&nbsp;&nbsp;<i>{post.frontmatter.desc || 'No description available'}</i></div>
-      <div>{post.frontmatter.tags && post.frontmatter.tags.map(tag => (<a class="tag" href={`/tags/${encodeURIComponent(tag)}/`}>{tag}</a>))}</div>
-    </Box>
-    )}
-    {
-  totalPages > 1 && (
-   <center><div class="pagination">
-    {
-  Array.from({ length: totalPages }, (_: undefined, i: number) => {
-      const page = i + 1;
-      return (
-     <a class="button" href={page === 1 ? "/blog" : `/blog/${page}`}>{i + 1}</a>
-    )
-  })
-    }
-   </div></center>
-)}
+  { paginatedPosts.map((post) => 
+    <a href={post.url} style="text-decoration:none;">
+      <div class="box" id="card">
+        <h3>{post.frontmatter.title}</h3>
+        <h5>
+          <div>{post.frontmatter.date}&nbsp;&nbsp;•&nbsp;&nbsp;<i>{post.frontmatter.desc || 'No description available'}</i></div>
+          <div class="tags">{post.frontmatter.tags && post.frontmatter.tags.map(tag => (<a class="tag" href={`/tags/${encodeURIComponent(tag)}/`}>{tag}</a>))}</div>
+        </h5>
+        <slot />
+      </div>
+    </a>
+  )}
+  { totalPages > 1 && (
+    <center><div class="pagination">
+      { Array.from({ length: totalPages }, (_: undefined, i: number) => {
+        const page = i + 1;
+        return (<a class="button" href={page === 1 ? "/blog" : `/blog/${page}`}>{i + 1}</a>)
+      })}
+    </div></center>
+  )}
 </Layout>

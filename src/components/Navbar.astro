@@ -2,37 +2,36 @@
 import { Icon } from 'astro-icon/components';
 import { cfg } from "../config";
 ---
-    <center><div class="navbar">
-        <div class="navbtn">
-            <a href="/projects">
-                <Icon name=`${cfg.iconset}:folder-rounded` />
-                <div id="name">Projects</div>
-            </a>
-        </div>
-        <div class="navbtn">
-            <a href="/socials">
-                <Icon name=`${cfg.iconset}:group-rounded` />
-                <div id="name">Socials</div>
-            </a>
-        </div>
-        <div class="navbtn logo">
-            <div class="rf--hidden">
-                <a href="/" title="click here to go Home!"><img src={cfg.logo} alt={cfg.name}></a>
-            </div>
-            <div class="mof--hidden">
-                <h1><a href="/" title="click here to go Home!">{cfg.name}</a></h1>
-            </div>
-        </div>
-        <div class="navbtn">
-            <a href="/devices">
-                <Icon name=`${cfg.iconset}:laptop-windows-outline-rounded` />
-                <div id="name">Devices</div>
-            </a>
-        </div>
-        <div class="navbtn">
-            <a href="/blog">
-                <Icon name=`${cfg.iconset}:stylus` />
-                <div id="name">Blog</div>
-            </a>
-        </div>
-    </div></center>
+
+<div class="navbar">
+    <a class="navbtn" href="/projects">
+        <Icon name=`${cfg.iconset}:folder-rounded` />
+        <div id="name">Projects</div>
+    </a>
+    <a class="navbtn" href="/socials">
+        <Icon name=`${cfg.iconset}:group-rounded` />
+        <div id="name">Socials</div>
+    </a>
+    <div class="navbtn logo">
+        <a href="/" title="click here to go Home!"><img src={cfg.logo} alt={cfg.name}></a>
+    </div>
+    <a class="navbtn" href="/devices">
+        <Icon name=`${cfg.iconset}:laptop-windows-outline-rounded` />
+        <div id="name">Devices</div>
+    </a>
+    <a class="navbtn" href="/blog">
+        <Icon name=`${cfg.iconset}:stylus` />
+        <div id="name">Blog</div>
+        </a>
+</div>
+
+<center><div class="mof--hidden">
+    <h1><a href="/" title="click here to go Home!">{cfg.name}</a></h1>
+    <a href="/projects">Projects</a>
+    &nbsp;~&nbsp;
+    <a href="/socials">Socials</a>
+    &nbsp;~&nbsp;
+    <a href="/devices">Devices</a>
+    &nbsp;~&nbsp;
+    <a href="/blog">Blog</a>
+</div></center>

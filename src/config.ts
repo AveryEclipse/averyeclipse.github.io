@@ -1,3 +1,5 @@
+// CONFIGURATION FILE (config.ts)
+
 export const cfg = {
   // ABOUT THE WEBSITE
   domain: "avery.is-a.dev", // The site's domain/subdomain

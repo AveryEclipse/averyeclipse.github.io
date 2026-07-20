@@ -1,22 +1,37 @@
 ---
-import { Icon } from 'astro-icon/components';
 import Layout from '../layouts/Site.astro';
+import Box from '../components/Box.astro';
 ---
 
 <Layout icon="group-rounded" title="Socials" desc="Where I am!">
-   <div>I am most frequently active on the following platforms:</div>
-   <br>
-   <ul class="list" id="nobullet">
-   <li><Icon name="simple-icons:discord" />&nbsp;<b>Discord:</b>&nbsp;<a href="http://discord.com/users/1456343162153865320">averyeclipse</a></li>
-   <li><Icon name="simple-icons:mastodon" />&nbsp;<b>Mastodon:</b>&nbsp;<a rel="me" href="http://wetdry.world/@clyron">@clyron@wetdry.world</a></li>
-   <li><Icon name="simple-icons:bluesky" />&nbsp;<b>Bluesky:</b>&nbsp;<a href="http://bsky.app/profile/did:plc:fqvzbqsjzjkl4o66rfp6cgk3">@avery.is-a.dev</a></li>
-   </ul>
-   <br>
-   <div>Accounts everywhere else:</div>
-   <br>
-   <ul class="list" id="nobullet">
-   <li><Icon name="simple-icons:github" />&nbsp;<b>GitHub:</b>&nbsp;<a href="http://github.com/AveryEclipse">AveryEclipse</a></li>
-   <li><Icon name="simple-icons:youtube" />&nbsp;<b>YouTube:</b>&nbsp;<a href="http://youtube.com/@theaveryeclipse">AveryEclipse</a></li>
-   <li><Icon name="simple-icons:twitter" />&nbsp;<b>Twitter:</b>&nbsp;<a href="http://x.com/theaveryeclipse">@theaveryeclipse</a> <small>(why..)</small></li>
-   </ul>
+   <Box 
+      icon="simple-icons:discord"
+      title="Discord"
+      url="https://discord.com/users/1456343162153865320"
+      desc="averyeclipse"
+   />
+   <Box 
+      icon="simple-icons:mastodon"
+      title="Mastodon"
+      url="https://wetdry.world/@clyron"
+      desc="@clyron@wetdry.world"
+   />
+   <Box 
+      icon="simple-icons:bluesky"
+      title="Bluesky"
+      url="https://bsky.app/profile/did:plc:fqvzbqsjzjkl4o66rfp6cgk3"
+      desc="@avery.is-a.dev"
+   />
+   <Box 
+      icon="simple-icons:github"
+      title="GitHub"
+      url="https://github.com/AveryEclipse"
+      desc="AveryEclipse"
+   />
+   <Box 
+      icon="simple-icons:youtube"
+      title="YouTube"
+      url="https://youtube.com/@theaveryeclipse"
+      desc="AveryEclipse"
+   />
 </Layout>

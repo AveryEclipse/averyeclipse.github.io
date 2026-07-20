@@ -1,15 +1,32 @@
 ---
-import { Icon } from 'astro-icon/components';
 import Layout from '../layouts/Site.astro';
+import Box from '../components/Box.astro';
 ---
 
 <Layout icon="folder-rounded" title="Projects" desc="What I do!">
-   <div>Projects I'm currently actively working or involving in:</div>
-   <br>
-   <ul class="list" id="nobullet">
-   <li><Icon name="simple-icons:youtube" />&nbsp;<a href="https://youtube.com/@astrontworkstation"><b>AstroNT:</b></a>&nbsp;A tech-oriented YouTube channel with almost 1K+ subs.</li>
-   <li><Icon name="material-symbols:network-node" />&nbsp;<a href="https://axeon-network.github.io"><b>Axeon Network:</b></a>&nbsp;Initially a <a href="https://axeon-network.github.io/discord">Discord community</a>, later evolved into an online collective behind projects like <a href="https://axeon-network.github.io/kurowiki">KuroWiki</a>.</li>
-   <li><Icon name="material-symbols:preview-outline" />&nbsp;<a href="/previewer"><b>Previewer:</b></a>&nbsp;A little utility for previewing HTML and/or CSS code.</li>
-   <li><Icon name="material-symbols:globe" />&nbsp;<a href="#"><b>AveryWebsite:</b></a>&nbsp;The website you're currently on right now!</li>
-   </ul>
+   <Box
+      icon="simple-icons:youtube"
+      title="AstroNT"
+      url="https://youtube.com/@astrontworkstation"
+      desc="A tech-oriented YouTube channel with over 1K subs and growing!"
+   />
+   <Box 
+      icon="material-symbols:book-ribbon-rounded"
+      title="KuroWiki"
+      url="https://axeon-network.github.io/kurowiki"
+      desc="A wiki about the Axeon Network and some of its admins based on an custom engine, Akane. An Axeon project."
+   />
+   <Box 
+      icon="material-symbols:preview-outline"
+      title="Previewer"
+      url="/previewer"
+      desc="A little utility for previewing HTML and/or CSS code."
+   />
+   <Box 
+      icon="material-symbols:globe"
+      title="AveryWebsite"
+      desc="This website!"
+   />
+   <hr>
+   <p>I am also the founder of <a href="https://axeon-network.github.io"><b>Axeon Network</b></a>, a community-centric collective which initially began as a Discord Server in 2017.</p>
 </Layout>

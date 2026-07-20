@@ -5,21 +5,23 @@ interface Props {
   header?: boolean;
 	title?: string;
   icon?: string;
+  url?: string;
+  desc?: string;
 }
-const { header, title = false, icon = false } = Astro.props;
+const { header = true, title = false, icon = false, url, desc = false } = Astro.props;
 ---
-<div>
-  <div class="box">
+
+<a href={url} style="text-decoration:none;">
+  <div class="box" id={url ? "card" : undefined}>
     { header && (
-    <h2 class="section">
-      { icon && (
-        <Icon name=`${cfg.iconset}:${icon}` />
-      )}
-      { title && (
-        <span>{title}</span>
-      )}
-    </h2>
+      <h3>
+        { icon && (<Icon name={icon} />)}
+        { title && (title)}
+      </h3>
+      <h5>
+        { desc && (<i>{desc}</i>)}
+      </h5>
     )}
     <slot />
-   </div>
-</div>
+  </div>
+</a>

@@ -1,80 +1,72 @@
 ---
-import { Icon } from 'astro-icon/components';
 import Layout from '../layouts/Site.astro';
+import Box from '../components/Box.astro';
 ---
 
 <Layout icon="laptop-windows-outline-rounded" title="Devices" desc="What I have!">
-   <div class="box">
-       <div class="section">
-         <h3><Icon name="material-symbols:laptop-windows-outline-rounded" />&nbsp;Lenovo IdeaPad 1 15ALC7 <small>(AveryLappy)</small></h3>
-         <h5><i>my main PC!</i></h5>
-       </div>
-       <ul class="list">
-         <li><b>CPU:</b> AMD Ryzen 7 5700U (Zen 2/Lucienne)</li>
-         <li><b>GPU:</b> AMD Radeon RX Vega 8 <small>(integrated)</small></li>
-         <li><b>RAM:</b> 12GB DDR4</li>
-         <li><b>Storage:</b> 500GB Western Digital NVMe SSD</li>
-         <li><b>OS:</b>
-           <ul>
-             <li>Arch Linux with KDE Plasma <small>(primary)</small></li>
-             <li>Windows 11 Pro 25H2 <small>(secondary)</small></li>
-           </ul>
-         </li>
+  <Box 
+    icon="material-symbols:laptop-windows-outline-rounded"
+    title="Lenovo IdeaPad 1 15ALC7"
+    desc="my main PC!">
+    <ul class="list">
+      <li><b>CPU:</b> AMD Ryzen 7 5700U (Zen 2/Lucienne)</li>
+      <li><b>GPU:</b> AMD Radeon RX Vega 8 <small>(integrated)</small></li>
+      <li><b>RAM:</b> 12GB DDR4</li>
+      <li><b>Storage:</b> 500GB Western Digital NVMe SSD</li>
+      <li><b>OS:</b><ul>
+        <li>Arch Linux with KDE Plasma <small>(primary)</small></li>
+        <li>Windows 11 Pro 25H2 <small>(secondary)</small></li></ul>
+      </li>
+    </ul>   
+  </Box>
+  <Box 
+    icon="material-symbols:laptop-windows-outline-rounded"
+    title="HP Laptop 14s-fq0xxx"
+    desc="my testing machine!">
+    <ul class="list">
+      <li><b>CPU:</b> AMD 3020e</li>
+      <li><b>GPU:</b> AMD Radeon RX Vega 3 <small>(integrated)</small></li>
+      <li><b>RAM:</b> 4GB DDR4</li>
+      <li><b>Storage:</b> 128GB Samsung SATA SSD</li>
+      <li><b>OS:</b> Windows 10 IoT LTSC 2021</li>
+    </ul>
+  </Box>
+  <Box 
+    icon="material-symbols:laptop-windows-outline-rounded"
+    title="Lenovo ThinkPad T61"
+    desc="my retro machine!">
+    <ul class="list">
+      <li><b>CPU:</b> Intel Core 2 Duo T8300 (Penryn)</li>
+      <li><b>GPU:</b> Integrated Intel GPU</li>
+      <li><b>RAM:</b> 2GB DDR2</li>
+      <li><b>Storage:</b> 150GB Hitachi HDD</li>
+      <li><b>OS:</b> Windows Vista Ultimate SP2 x64</li>
+    </ul>
+  </Box>
+  <Box 
+    icon="material-symbols:laptop-windows-outline-rounded"
+    title="Lenovo G50-70"
+    desc="my old main PC!">
+    <ul class="list">
+      <li><b>CPU:</b> Intel Core i5-4210U (4th gen/Haswell)</li>
+      <li><b>GPU:</b> Integrated Intel GPU</li>
+      <li><b>RAM:</b> 4GB DDR3</li>
+      <li><b>Storage:</b><ul>
+        <li>128GB Kingston SATA SSD <small>(boot drive)</small></li>
+        <li>1TB Western Digital HDD <small>(storage drive)</small></li></ul>
+      </li>
+      <li><b>OS:</b> Windows 8.1 Pro x64</li>
+    </ul>
+  </Box>
+  <Box 
+    icon="material-symbols:smartphone"
+    title="Phones"
+    desc="my phones!">
+    <ul class="list">
+      <li><b>Samsung Galaxy A26 5G</b> (AveryPhone), running Android 16 with One UI 8 <small>(primary)</small></li>
+      <li><b>Xiaomi Redmi 10 2022</b> (AveryPhone2), running Android 13 with MIUI 14 <small>(secondary)</small></li>
+      <li><b>Samsung Galaxy J5 2017</b> (AveryJ5), running Android 9 with One UI 1 <small>(retro)</small></li>
+      <li><b>Samsung Galaxy A23 5G</b>, running Android 14 with One UI 6 <small>(backup)</small></li>
        </ul>
-   </div>
-  <div class="box">
-        <div class="section">
-          <h3><Icon name="material-symbols:laptop-windows-outline-rounded" />&nbsp;HP Laptop 14s-fq0xxx <small>(HPLappy)</small></h3>
-          <h5><i>my testing machine!</i></h5>
-        </div>
-        <ul class="list">
-          <li><b>CPU:</b> AMD 3020e</li>
-          <li><b>GPU:</b> AMD Radeon RX Vega 3 <small>(integrated)</small></li>
-          <li><b>RAM:</b> 4GB DDR4</li>
-          <li><b>Storage:</b> 128GB Samsung SATA SSD</li>
-          <li><b>OS:</b> Windows 10 IoT LTSC 2021</li>
-        </ul>
-   </div>
-   <div class="box">
-        <div class="section">
-          <h3><Icon name="material-symbols:laptop-windows-outline-rounded" />&nbsp;Lenovo ThinkPad T61 <small>(AveryThinkPad)</small></h3>
-          <h5><i>my retro machine!</i></h5>
-        </div>
-        <ul class="list">
-          <li><b>CPU:</b> Intel Core 2 Duo T8300 (Penryn)</li>
-          <li><b>GPU:</b> Integrated Intel GPU</li>
-          <li><b>RAM:</b> 2GB DDR2</li>
-          <li><b>Storage:</b> 150GB Hitachi HDD</li>
-          <li><b>OS:</b> Windows Vista Ultimate SP2 x64</li>
-        </ul>
-   </div>
-   <div class="box">
-        <div class="section">
-          <h3><Icon name="material-symbols:laptop-windows-outline-rounded" />&nbsp;Lenovo G50-70 <small>(TheHaswellLappy)</small></h3>
-          <h5><i>my old main PC!</i></h5>
-        </div>
-        <ul class="list">
-          <li><b>CPU:</b> Intel Core i5-4210U (4th gen/Haswell)</li>
-          <li><b>GPU:</b> Integrated Intel GPU</li>
-          <li><b>RAM:</b> 4GB DDR3</li>
-          <li><b>Storage:</b>
-            <ul>
-               <li>128GB Kingston SATA SSD <small>(boot drive)</small></li>
-               <li>1TB Western Digital HDD <small>(storage drive)</small></li>
-            </ul>
-          </li>
-          <li><b>OS:</b> Windows 8.1 Pro x64</li>
-        </ul>
-   </div>
-    <div class="box">
-      <div class="section">
-        <h3><Icon name="material-symbols:smartphone" />&nbsp;Phones</h3>
-      </div>
-        <ul class="list">
-          <li><b>Samsung Galaxy A26 5G</b> (AveryPhone), running Android 16 with One UI 8 <small>(primary)</small></li>
-          <li><b>Xiaomi Redmi 10 2022</b> (AveryPhone2), running Android 13 with MIUI 14 <small>(secondary)</small></li>
-          <li><b>Samsung Galaxy J5 2017</b> (AveryJ5), running Android 9 with One UI 1 <small>(retro)</small></li>
-          <li><b>Samsung Galaxy A23 5G</b>, running Android 14 with One UI 6 <small>(backup)</small></li>
-       </ul>
-   </div>
+  </Box>
 </Layout>

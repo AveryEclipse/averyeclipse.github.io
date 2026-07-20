@@ -7,13 +7,12 @@ interface Props {
 }
 const { title, icon } = Astro.props;
 ---
-<div>
-  <details class="cbox">
-    <summary>
-      <h2 class="section"><Icon name=`${cfg.iconset}:${icon}` />&nbsp;{title}</h2>
-    </summary> <!-- details and summary tags aren't supported on ancient browsers -->
-    <div class="cboxcontent">
-      <slot />
-    </div>
-  </details>
-</div>
+
+<details class="cbox">
+  <summary>
+    <h2><Icon name=`${cfg.iconset}:${icon}` />{title}</h2>
+  </summary> <!-- details and summary tags aren't supported on ancient browsers -->
+  <div class="cboxcontent">
+    <slot />
+  </div>
+</details>

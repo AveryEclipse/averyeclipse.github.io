@@ -1,5 +1,5 @@
 ---
-const { frontmatter, headings } = Astro.props;
+const { frontmatter } = Astro.props;
 import { cfg } from "../config";
 
 import Navbar from '../components/Navbar.astro';
@@ -22,13 +22,15 @@ import Footer from '../components/Footer.astro';
   </head>
   <body>
     <Navbar />
-      <div class="content blog">
-        <div class="head blog">
-          <h1 id="title">{frontmatter.title}</h1>
+      <div class="content">
+        <div class="head">
+          <h1>{frontmatter.title}</h1>
           <div>{frontmatter.date}&nbsp;&nbsp;•&nbsp;&nbsp;<i>{frontmatter.desc || 'No description available'}</i></div>
-          <div>{frontmatter.tags && frontmatter.tags.map(tag => (<a class="tag" href={`/tags/${encodeURIComponent(tag)}/`}>{tag}</a>))}</div>
+          <div class="tags">{frontmatter.tags && frontmatter.tags.map(tag => (<a class="tag" href={`/tags/${encodeURIComponent(tag)}/`}>{tag}</a>))}</div>
         </div>
-        <slot />
+        <div class="post">
+          <slot />
+        </div>
       </div>
       <Footer />
   </body>

@@ -41,11 +41,16 @@ taggedPosts.sort(
 ---
 
 <Layout icon="stylus" title="Blog" desc=`Posts tagged with <code>${tag}</code>. <a href='/tags'>View all tags</a>`>
-    {taggedPosts.map((post) => 
-    <Box>
-      <div><h2><a href={post.url}>{post.frontmatter.title}</a></h2></div>
-      <div>{post.frontmatter.date}&nbsp;&nbsp;•&nbsp;&nbsp;<i>{post.frontmatter.desc || 'No description available'}</i></div>
-      <div>{post.frontmatter.tags && post.frontmatter.tags.map(tag => (<a class="tag" href={`/tags/${encodeURIComponent(tag)}/`}>{tag}</a>))}</div>
-    </Box>
-    )}
+  { taggedPosts.map((post) => 
+    <a href={post.url} style="text-decoration:none;">
+      <div class="box" id="card">
+        <h3>{post.frontmatter.title}</h3>
+        <h5>
+          <div>{post.frontmatter.date}&nbsp;&nbsp;•&nbsp;&nbsp;<i>{post.frontmatter.desc || 'No description available'}</i></div>
+          <div class="tags">{post.frontmatter.tags && post.frontmatter.tags.map(tag => (<a class="tag" href={`/tags/${encodeURIComponent(tag)}/`}>{tag}</a>))}</div>
+        </h5>
+        <slot />
+      </div>
+    </a>
+  )}
 </Layout>

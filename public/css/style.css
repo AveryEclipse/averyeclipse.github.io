@@ -1,3 +1,5 @@
+/* NORMAL LAYOUT STYLING FILE (style.css) */
+
 @font-face {
     font-family: "geist";
     src: url("../css/fonts/geist.ttf");
@@ -7,26 +9,25 @@
     src: url("../css/fonts/geistmono.ttf");
 }
 @font-face {
-    font-family: "quicksand";
-    src: url("../css/fonts/quicksand.ttf");
+    font-family: "cause";
+    src: url("../css/fonts/cause.ttf");
 }
 @supports (gap: 30px) {
 html {
     --text-color: rgba(230, 230, 230, 1);
     color: var(--text-color);
-    background: rgba(30, 30, 30, 1);
+    background: linear-gradient(#3d3c4e, #291f42);
+    background-attachment: fixed;
     font-family: "geist";
 }
 .navbar {
     display: flex;
     position: fixed;
-    justify-content: center;
-    align-items: center;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
     padding: 24px;
-    font-family: "quicksand";
+    font-family: "cause";
 }
 .content {
     padding-top: 100px;
@@ -35,6 +36,7 @@ html {
     width: 75px;
     height: 40px;
     font-size: 16px;
+    text-align: center;
     text-transform: lowercase;
 }
 .navbtn:not(:first-child) {
@@ -52,21 +54,8 @@ html {
 .logo img {
     width: 125px;
 }
-h1, #title {
-    font-size: 34px;
-}
-h2 {
-    font-size: 28px;
-}
-h3 {
-    font-size: 24px;
-}
-h1, #title,
-h2, .section {
-    font-weight: bold;
-}
 h1, h2, h3, h4, h5, h6 {
-    font-family: "quicksand";
+    font-family: "cause";
 }
 a {
     color: var(--text-color);
@@ -74,10 +63,17 @@ a {
 pre, code {
     font-family: "geistmono";
 }
+pre code {
+    background-color: transparent;
+    border: none;
+}
 code {
     font-size: 14px;
-    background-color: rgba(0,0,0,0.5);
-    border: solid 1px rgba(0,0,0,0.2);
+    font-style: normal;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 0.5px solid black;
+    padding: 2px;
+    margin: 0 2px;
 }
 .list#nobullet {
     list-style-type: none;
@@ -90,20 +86,21 @@ code {
 .box, .cbox,
 pre {
     border: 2px solid rgba(230, 230, 230, 0.5);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(20, 15, 20, 0.5) !important;
     color: rgba(230, 230, 230, 1);
     backdrop-filter: blur(3px);
 }
-.navbtn, .button, .tag,
-.box, .cbox, .cbox summary::before {
+.box, .cbox, .cbox summary::before, 
+.button, .navbtn, .tag {
     transition: 0.2s;
 }
-.cbox:hover,
-.button:hover,
-.navbtn:hover,
-.tag:hover {
-    border: 2px solid var(--text-color);
+#card:hover, .cbox:hover,
+.button:hover, .navbtn:hover, .tag:hover {
+    border: 2px solid rgba(230, 230, 230, 0.8);
     box-shadow: 1px 1px 3px;
+}
+.tags {
+    font-family: "geist";
 }
 .cbox summary {
     display: flex;
@@ -111,15 +108,12 @@ pre {
     cursor: pointer;
     flex-grow: 1;
     user-select: none;
+    padding: 0;
 }
 .cbox summary::before {
     content: "▶";
     transform: translateX(3px) translateY(0px) rotate(0); /* me when unicode arrow has padding on the right */
-    margin-right: 10px;
-    margin-top: 2px;
-}
-.cbox summary .section {
-    padding: 0;
+    margin: 2px 10px 0 0;
 }
 details[open] summary::before {
     transform: translateX(0px) translateY(-2px) rotate(90deg);
@@ -129,12 +123,17 @@ details[open] summary::before {
 .mof--hidden {
     display: none;
 }
+[data-icon],
 .rf--hidden {
     display: inline-block;
 }
 [data-icon] {
-    display: inline-block;
     vertical-align: -2.5px;
+}
+h1 [data-icon],
+h2 [data-icon], 
+h3 [data-icon] {
+    margin-right: 5px;
 }
 [data-icon="material-symbols:arrow-back-rounded"],
 [data-icon="material-symbols:shuffle"],
@@ -151,7 +150,7 @@ details[open] summary::before {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-    .blog img {
+    .post img {
         max-width: 80%;
     }
 }
