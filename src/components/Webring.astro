@@ -1,0 +1,25 @@
+---
+import { cfg } from "../config";
+import { Icon } from 'astro-icon/components';
+interface Props {
+  name: string;
+  link: string;
+  prev: string;
+  random?: string;
+  next: string;
+}
+const { name, link, prev, random = false, next } = Astro.props;
+---
+
+<b><a href={link}>{name}</a></b>
+<a class="button" href={prev} title="Previous Site">
+  <Icon name=`${cfg.iconset}:arrow-back-rounded` /><span class="mof--hidden">Previous</span>
+</a>
+{ random && (
+  <a class="button" href={random} title="Random Site">
+    <Icon name=`${cfg.iconset}:shuffle` /><span class="mof--hidden">Random</span>
+  </a>
+)}
+<a class="button" href={next} title="Next Site">
+  <Icon name=`${cfg.iconset}:arrow-forward-rounded` /><span class="mof--hidden">Next</span>
+</a>

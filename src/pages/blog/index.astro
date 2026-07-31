@@ -34,17 +34,11 @@ const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
 ---
 
 <Layout icon="stylus" title="Blog" desc="Where I yap about random things! <a href='../feed.xml'>Also available on RSS</a>">
-  { paginatedPosts.map((post) => 
-    <a href={post.url} style="text-decoration:none;">
-      <div class="box" id="card">
-        <h3>{post.frontmatter.title}</h3>
-        <h5>
-          <div>{post.frontmatter.date}&nbsp;&nbsp;•&nbsp;&nbsp;<i>{post.frontmatter.desc || 'No description available'}</i></div>
-          <div class="tags">{post.frontmatter.tags && post.frontmatter.tags.map(tag => (<a class="tag" href={`/tags/${encodeURIComponent(tag)}/`}>{tag}</a>))}</div>
-        </h5>
-        <slot />
-      </div>
-    </a>
+  { paginatedPosts.map((post) =>
+    <Box title={post.frontmatter.title} url={post.url}>
+      <h5>{post.frontmatter.date}&nbsp;&nbsp;•&nbsp;&nbsp;<i>{post.frontmatter.desc || 'No description available'}</i></h5>
+      <h5 class="tags">{post.frontmatter.tags && post.frontmatter.tags.map(tag => (<a class="tag" href={`/tags/${encodeURIComponent(tag)}/`}>{tag}</a>))}</h5>
+    </Box>
   )}
   { totalPages > 1 && (
     <center><div class="pagination">

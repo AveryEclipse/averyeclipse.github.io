@@ -1,14 +1,15 @@
 ---
 import { cfg } from "../config";
-import { Icon } from 'astro-icon/components';
 import Layout from '../layouts/Site.astro';
 import Box from '../components/CollapsibleBox.astro';
+import Button from '../components/RetroButton.astro';
+import Webring from '../components/Webring.astro';
 const name = cfg.shortname || cfg.name;
 ---
 
 <Layout icon="waving-hand-rounded" title="Home" head="Hi there~!" desc=`You landed on ${name}'s personal website! ^w^`>
   <div>Who I am:
-    <ul class="list" id="nobullet">
+    <ul class="unbulleted-list">
       <li><span class="rf--hidden">💻</span> <b>Tech nerd</b> who happens to know a thing or two about coding</li>
       <li><span class="rf--hidden">📹</span> <b>Content creator</b> on YouTube</li>
       <li><span class="rf--hidden">🖼️</span> Part-time <b>visual artist</b></li>
@@ -19,23 +20,22 @@ const name = cfg.shortname || cfg.name;
     { cfg.timezone && ( <div><b>Timezone:</b> UTC{cfg.timezone}</div> )}
     { cfg.location && ( <div><b>Based in:</b> {cfg.location}</div> )}
   </div>
+  <br class="mof--hidden"> <!-- so theres an actual gap in IE -->
   <Box title="Buttons" icon="star-rounded">
-    <a href="https://axeon-network.github.io"><img src="/img/8831/axeon.png" title="Axeon Network" alt="Axeon Network"></a>
-    <a href="https://youtube.com/@AstroNTWorkstation"><img src="/img/8831/astront.png" title="AstroNT" alt="AstroNT"></a>
-    <a href="https://wetdry.world/@clyron"><img src="/img/8831/wetdryworld.png" title="Wet-Dry World" alt="Wet-Dry World"></a>
-    <a href="http://bsky.app/profile/did:plc:fqvzbqsjzjkl4o66rfp6cgk3"><img src="/img/8831/bluesky.gif" title="Bluesky" alt="Bluesky"></a>
-    <img src="/img/8831/gnu-linux.gif" title="Made on GNU/Linux" alt="Made on GNU/Linux">
-    <a href="https://archlinux.org"><img src="/img/8831/archlinux.gif" title="Arch Linux" alt="Arch Linux"></a>
-    <a href="https://code.visualstudio.com"><img src="/img/8831/vscode.gif" title="Visual Studio Code" alt="Visual Studio Code"></a>
-    <a href="https://krita.org"><img src="/img/8831/krita.png" title="Krita" alt="Krita"></a>  
-    <img src="/img/8831/ublockoriginnow.png" title="uBlock Origin Now" alt="uBlock Origin Now">
-    <img src="/img/8831/ieexplode.gif" title="Internet Exploder" alt="Internet Exploder">
-    <img src="/img/8831/saynotoweb3.gif" title="Say no to Web3" alt="Say no to Web3">
-    <img src="/img/8831/eyes.gif" title="Best viewed with EYES" alt="Best viewed with EYES">
-    <img src="/img/8831/valid-any.gif" title="Any Browser!" alt="Any Browser!">
-    <a href="https://googleballs.com"><img src="/img/8831/googleballs.png" title="Google Balls!!" alt="Google Balls!!"></a>
-    <img src="/img/8831/badapple.gif" title="Bad Apple" alt="Bad Apple">
-    
+    <Button img="astront.png" name="AstroNT" link="https://youtube.com/@AstroNTWorkstation" />
+    <Button img="axeon.png" name="Axeon Network" link="https://axeon-network.github.io" />
+    <Button img="wetdryworld.png" name="Wet-Dry World" link="https://wetdry.world/@clyron" />
+    <Button img="bluesky.gif" name="Bluesky" link="https://bsky.app/profile/did:plc:fqvzbqsjzjkl4o66rfp6cgk3" />
+    <Button img="valid-any.gif" name="Any Browser!" />
+    <Button img="eyes.gif" name="Best viewed with EYES" />
+    <Button img="gnu-linux.gif" name="Made on GNU/Linux" />
+    <Button img="vscode.gif" name="Visual Studio Code" link="https://code.visualstudio.com" />
+    <Button img="ublockoriginnow.png" name="uBlock Origin Now" />
+    <Button img="ieexplode.gif" name="Internet Exploder" />
+    <Button img="saynotoweb3.gif" name="Say no to Web3" />
+    <Button img="badapple.gif" name="Bad Apple" />
+    <Button img="googleballs.png" name="Google Balls!!" link="https://googleballs.com" />
+
     <div> <!-- extra div so the clickToCopy message stays below the buttons when copying -->
       <div style="padding: 10px 0;"><b>My buttons!</b></div>
       <img src="/img/8831/avery1.png" alt="AveryEclipse button 1" class="mybutton" data-copy=`&lt;a href="http://${cfg.domain}"&gt;&lt;img src="http://${cfg.domain}/img/8831/avery1.png"&gt;` style="cursor:pointer;">
@@ -64,15 +64,11 @@ const name = cfg.shortname || cfg.name;
     </script>
   </Box>
   <Box title="Webrings" icon="planet-rounded">
-    <b><a href="https://fediring.net/">Fediring</a></b>
-    <a class="button" href=`https://fediring.net/previous?host=${cfg.domain}` title="Previous Site">
-      <Icon name=`${cfg.iconset}:arrow-back-rounded` /><span class="mof--hidden">&lt;&#45;&#45;</span>
-    </a>
-    <a class="button" href="https://fediring.net/random" title="Random Site">
-      <Icon name=`${cfg.iconset}:shuffle` /><span class="mof--hidden">Random</span>
-    </a>
-    <a class="button" href=`https://fediring.net/next?host=${cfg.domain}` title="Next Site">
-      <Icon name=`${cfg.iconset}:arrow-forward-rounded` /><span class="mof--hidden">&#45;&#45;&gt;</span>
-    </a>
+    <Webring
+      name=`Fediring`
+      link=`https://fediring.net/`
+      prev=`https://fediring.net/previous?host=${cfg.domain}`
+      random=`https://fediring.net/random`
+      next=`https://fediring.net/next?host=${cfg.domain}` />
   </Box>
 </Layout>

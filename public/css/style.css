@@ -16,7 +16,7 @@
 html {
     --text-color: rgba(230, 230, 230, 1);
     color: var(--text-color);
-    background: linear-gradient(#3d3c4e, #291f42);
+    background: linear-gradient(rgba(61, 60, 78, 1), rgba(41, 31, 66, 1));
     background-attachment: fixed;
     font-family: "geist";
 }
@@ -75,12 +75,12 @@ code {
     padding: 2px;
     margin: 0 2px;
 }
-.list#nobullet {
+li {
+    padding-block: 3px;
+}
+.unbulleted-list {
     list-style-type: none;
     margin-block: 3px;
-}
-.list li {
-    padding-block: 3px;
 }
 .navbtn, .button, .tag,
 .box, .cbox,
@@ -89,6 +89,7 @@ pre {
     background-color: rgba(20, 15, 20, 0.5) !important;
     color: rgba(230, 230, 230, 1);
     backdrop-filter: blur(3px);
+    border-radius: 15px;
 }
 .box, .cbox, .cbox summary::before, 
 .button, .navbtn, .tag {
@@ -122,6 +123,9 @@ details[open] summary::before {
 .cbox summary::marker,
 .mof--hidden {
     display: none;
+}
+.cboxcontent {
+    padding: 2%;
 }
 [data-icon],
 .rf--hidden {

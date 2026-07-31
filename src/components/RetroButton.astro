@@ -1,0 +1,16 @@
+---
+interface Props {
+  img: string;
+  name: string;
+  link?: string;
+}
+const { img, name, link } = Astro.props;
+---
+
+{
+  link ? (
+    <a href={link}><img src=`/img/8831/${img}` title={name} alt={name} /></a>
+  ) : (
+    <img src=`/img/8831/${img}` title={name} alt={name} />
+  )
+}
