@@ -89,7 +89,6 @@ pre {
     background-color: rgba(20, 15, 20, 0.5) !important;
     color: rgba(230, 230, 230, 1);
     backdrop-filter: blur(3px);
-    border-radius: 15px;
 }
 .box, .cbox, .cbox summary::before, 
 .button, .navbtn, .tag {
@@ -99,6 +98,9 @@ pre {
 .button:hover, .navbtn:hover, .tag:hover {
     border: 2px solid rgba(230, 230, 230, 0.8);
     box-shadow: 1px 1px 3px;
+}
+.box, .cbox {
+    border-radius: 15px;
 }
 .tags {
     font-family: "geist";
