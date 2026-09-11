@@ -52,7 +52,7 @@ h3 {
 .post li {
     line-height: 1.5;
 }
-a .box {
+a #card {
     cursor: pointer;
     /* ancient browsers like IE dont apply pointer cursor on the entire box */
 }

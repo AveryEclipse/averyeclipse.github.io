@@ -13,9 +13,10 @@ export const cfg = {
   name: "AveryEclipse", // Your name/online alias
   shortname: "Avery", // Shorter form of your name (used in descriptions and embeds)
   pronouns: "they/she", // Your pronouns
+  identity: "", // Your gender identity. Requires "pronouns" to be set first
   timezone: "+2", // Your timezone in UTC/GMT
+  tzname: "CEST", // The name of your timezone (e.g. "CEST" for "Central European Summer Time"). Requires "timezone" to be set first
   location: "", // The country/region you are currently based in
-  pronounsPage: "", // A link to your pronouns.page (or pronouns.cc or similar). Requires "pronouns" to be set
 
   // COPYRIGHT & LICENSING
   copyrightyear: "2026", // Copyright year. Change at first site update of the year

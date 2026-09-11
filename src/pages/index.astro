@@ -16,8 +16,8 @@ const name = cfg.shortname || cfg.name;
       <li><span class="rf--hidden">🌸</span> Just a <b>pretty girlypop</b>,, :3</li>
     </ul>
     <br>
-    { cfg.pronouns && ( <div><b>Pronouns:</b> {cfg.pronouns} <small>{ cfg.pronounsPage && (<span>(<a href={cfg.pronounsPage}>pronouns and terms</a>)</span>)}</small></div> )}
-    { cfg.timezone && ( <div><b>Timezone:</b> UTC{cfg.timezone}</div> )}
+    { cfg.pronouns && ( <div><b>Pronouns:</b> {cfg.pronouns} <small>{ cfg.identity && (<i>({cfg.identity})</i>)}</small></div> )}
+    { cfg.timezone && ( <div><b>Timezone:</b> UTC{cfg.timezone} <small>{ cfg.tzname && (<i>({cfg.tzname})</i>)}</small></div> )}
     { cfg.location && ( <div><b>Based in:</b> {cfg.location}</div> )}
   </div>
   <br class="mof--hidden"> <!-- so theres an actual gap in IE -->

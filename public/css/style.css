@@ -14,8 +14,7 @@
 }
 @supports (gap: 30px) {
 html {
-    --text-color: rgba(230, 230, 230, 1);
-    color: var(--text-color);
+    color: rgba(230, 230, 230, 1);
     background: linear-gradient(rgba(61, 60, 78, 1), rgba(41, 31, 66, 1));
     background-attachment: fixed;
     font-family: "geist";
@@ -58,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "cause";
 }
 a {
-    color: var(--text-color);
+    color: rgba(230, 230, 230, 1);
 }
 pre, code {
     font-family: "geistmono";
@@ -107,11 +106,6 @@ pre {
 }
 .cbox summary {
     display: flex;
-    list-style: none;
-    cursor: pointer;
-    flex-grow: 1;
-    user-select: none;
-    padding: 0;
 }
 .cbox summary::before {
     content: "▶";
