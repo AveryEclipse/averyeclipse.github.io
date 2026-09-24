@@ -4,10 +4,11 @@ import Box from '../components/Box.astro';
 ---
 
 <Layout icon="laptop-windows-outline-rounded" title="Devices" desc="What I have!">
+  <h4>Daily drivers</h4>
   <Box 
     icon="material-symbols:laptop-windows-outline-rounded"
     title="Lenovo IdeaPad 1 15ALC7"
-    desc="my main PC!">
+    desc="Aurora・my main PC!">
     <ul class="list">
       <li><b>CPU:</b> AMD Ryzen 7 5700U (Zen 2/Lucienne)</li>
       <li><b>GPU:</b> AMD Radeon RX Vega 8 <small>(integrated)</small></li>
@@ -20,9 +21,22 @@ import Box from '../components/Box.astro';
     </ul>   
   </Box>
   <Box 
+    icon="material-symbols:smartphone"
+    title="Samsung Galaxy A26 5G"
+    desc="Apollo・my main phone!">
+    <ul class="list">
+      <li><b>CPU:</b> Samsung Exynos 1380</li>
+      <li><b>GPU:</b> ARM Mali-G68</li>
+      <li><b>RAM:</b> 6GB LPDDR4X</li>
+      <li><b>Storage:</b> 128GB Internal Storage + 32GB SD Card</li>
+      <li><b>OS:</b> Android 16 with One UI 8.5</li>
+    </ul>
+  </Box>
+  <br><h4>Additional devices</h4>
+  <Box 
     icon="material-symbols:laptop-windows-outline-rounded"
     title="HP Laptop 14s-fq0xxx"
-    desc="my testing machine!">
+    desc="Ellara・my secondary/spare PC!">
     <ul class="list">
       <li><b>CPU:</b> AMD 3020e</li>
       <li><b>GPU:</b> AMD Radeon RX Vega 3 <small>(integrated)</small></li>
@@ -32,9 +46,46 @@ import Box from '../components/Box.astro';
     </ul>
   </Box>
   <Box 
+    icon="material-symbols:smartphone"
+    title="Samsung Galaxy A23 5G"
+    desc="my old main phone!">
+    <ul class="list">
+      <li><b>CPU:</b> Qualcomm Snapdragon 695</li>
+      <li><b>GPU:</b> Qualcomm Adreno 619</li>
+      <li><b>RAM:</b> 4GB LPDDR4X</li>
+      <li><b>Storage:</b> 64GB Internal Storage</li>
+      <li><b>OS:</b> Android 14 with One UI 6</li>
+    </ul>
+  </Box>
+  <Box 
+    icon="material-symbols:smartphone"
+    title="Xiaomi Redmi 10 (2022)"
+    desc="my spare phone!">
+    <ul class="list">
+      <li><b>CPU:</b> MediaTek Helio G88</li>
+      <li><b>GPU:</b> ARM Mali-G52</li>
+      <li><b>RAM:</b> 4GB LPDDR4X</li>
+      <li><b>Storage:</b> 64GB Internal Storage</li>
+      <li><b>OS:</b> Android 13 with MIUI 14</li>
+    </ul>
+  </Box>
+  <Box 
+    icon="material-symbols:smartphone"
+    title="Samsung Galaxy J5 (2017)"
+    desc="my 'retro' phone!">
+    <ul class="list">
+      <li><b>CPU:</b> Samsung Exynos Octa 7870</li>
+      <li><b>GPU:</b> ARM Mali-T830</li>
+      <li><b>RAM:</b> 2GB LPDDR3</li>
+      <li><b>Storage:</b> 16GB Internal Storage</li>
+      <li><b>OS:</b> Android 9 with One UI 1</li>
+    </ul>
+  </Box>
+  <br><h4>Currently not in use</h4>
+  <Box 
     icon="material-symbols:laptop-windows-outline-rounded"
     title="Lenovo ThinkPad T61"
-    desc="my retro machine!">
+    desc="Callisto・my retro PC!">
     <ul class="list">
       <li><b>CPU:</b> Intel Core 2 Duo T8300 (Penryn)</li>
       <li><b>GPU:</b> Integrated Intel GPU</li>
@@ -46,7 +97,7 @@ import Box from '../components/Box.astro';
   <Box 
     icon="material-symbols:laptop-windows-outline-rounded"
     title="Lenovo G50-70"
-    desc="my old main PC!">
+    desc="Amalthea・my old main PC!">
     <ul class="list">
       <li><b>CPU:</b> Intel Core i5-4210U (4th gen/Haswell)</li>
       <li><b>GPU:</b> Integrated Intel GPU</li>
@@ -57,16 +108,5 @@ import Box from '../components/Box.astro';
       </li>
       <li><b>OS:</b> Windows 8.1 Pro x64</li>
     </ul>
-  </Box>
-  <Box 
-    icon="material-symbols:smartphone"
-    title="Phones"
-    desc="my phones!">
-    <ul class="list">
-      <li><b>Samsung Galaxy A26 5G</b> (AveryPhone), running Android 16 with One UI 8 <small>(primary)</small></li>
-      <li><b>Xiaomi Redmi 10 2022</b> (AveryPhone2), running Android 13 with MIUI 14 <small>(secondary)</small></li>
-      <li><b>Samsung Galaxy J5 2017</b> (AveryJ5), running Android 9 with One UI 1 <small>(retro)</small></li>
-      <li><b>Samsung Galaxy A23 5G</b>, running Android 14 with One UI 6 <small>(backup)</small></li>
-       </ul>
   </Box>
 </Layout>

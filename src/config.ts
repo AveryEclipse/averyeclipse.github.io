@@ -12,7 +12,7 @@ export const cfg = {
   // Except for the 'name' variable, everything is optional
   name: "AveryEclipse", // Your name/online alias
   shortname: "Avery", // Shorter form of your name (used in descriptions and embeds)
-  pronouns: "they/she", // Your pronouns
+  pronouns: "any", // Your pronouns
   identity: "", // Your gender identity. Requires "pronouns" to be set first
   timezone: "+2", // Your timezone in UTC/GMT
   tzname: "CEST", // The name of your timezone (e.g. "CEST" for "Central European Summer Time"). Requires "timezone" to be set first
