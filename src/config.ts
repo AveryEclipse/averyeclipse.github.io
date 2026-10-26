@@ -3,20 +3,18 @@
 export const cfg = {
   // ABOUT THE WEBSITE
   domain: "avery.is-a.dev", // The site's domain/subdomain
-  favicon: "/img/star.png", // The site's favicon
+  favicon: "/img/favicon.png", // The site's favicon
   logo: "/img/logo.svg", // The site's logo
   iconset: "material-symbols", // The Iconify icon set used across the site
-  sourcecode: "http://github.com/AveryEclipse/averyeclipse.github.io", // URL address of the published source code
+  sourcecode: "https://github.com/AveryEclipse/averyeclipse.github.io", // URL address of the published source code
 
   // ABOUT YOU
   // Except for the 'name' variable, everything is optional
-  name: "AveryEclipse", // Your name/online alias
+  name: "avyneko", // Your name/online alias
   shortname: "Avery", // Shorter form of your name (used in descriptions and embeds)
   pronouns: "any", // Your pronouns
-  identity: "", // Your gender identity. Requires "pronouns" to be set first
-  timezone: "+2", // Your timezone in UTC/GMT
-  tzname: "CEST", // The name of your timezone (e.g. "CEST" for "Central European Summer Time"). Requires "timezone" to be set first
-  location: "", // The country/region you are currently based in
+  timezone: "+1", // Your timezone in UTC/GMT
+  tzname: "CET", // The name of your timezone (e.g. "CEST" for "Central European Summer Time"). Requires "timezone" to be set first
 
   // COPYRIGHT & LICENSING
   copyrightyear: "2026", // Copyright year. Change at first site update of the year

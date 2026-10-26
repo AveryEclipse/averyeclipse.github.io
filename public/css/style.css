@@ -15,7 +15,7 @@
 @supports (gap: 30px) {
 html {
     color: rgba(230, 230, 230, 1);
-    background: linear-gradient(rgba(61, 60, 78, 1), rgba(41, 31, 66, 1));
+    background: linear-gradient(rgba(80, 76, 89, 1), rgb(46, 45, 56));
     background-attachment: fixed;
     font-family: "geist";
 }
@@ -51,7 +51,7 @@ html {
     padding: 5px;
 }
 .logo img {
-    width: 125px;
+    width: 165px;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: "cause";
@@ -167,7 +167,7 @@ h3 [data-icon] {
         height: auto;
     }
     .logo img {
-        width: 90px;
+        width: 120px;
     }
     .content {
         padding-top: 75px;
